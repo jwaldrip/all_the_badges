@@ -1,0 +1,18 @@
+!!!
+/[if lt IE 7]
+  %html{ class: 'ie6', lang: 'en' }
+    = render 'layouts/head'
+    = render 'layouts/body'
+/[if IE 7]
+  %html{ class: 'ie7', lang: 'en' }
+    = render 'layouts/head'
+    = render 'layouts/body'
+/[if IE 8]
+  %html{ class: 'ie8', lang: 'en' }
+    = render 'layouts/head'
+    = render 'layouts/body'
+/[if IE 9]
+  %html{ lang: 'en' }
+    = render 'layouts/head'
+    = render 'layouts/body'
+

@@ -1,0 +1,3 @@
+class CodeClimate < Provider
+
+end

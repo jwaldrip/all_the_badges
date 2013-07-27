@@ -1,0 +1,5 @@
+class Travis < Provider
+
+
+
+end
