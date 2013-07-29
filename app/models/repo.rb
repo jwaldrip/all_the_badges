@@ -21,7 +21,7 @@ class Repo
     def find(user, repo, attrs={})
       cache_key = [:repo, user, repo, attrs.to_param].compact.join('/')
       Rails.cache.fetch cache_key, expires_in: 60.minutes do
-        new find_without_cache(user, repo, attrs={})
+        new find_without_cache(user, repo, attrs)
       end
     end
 

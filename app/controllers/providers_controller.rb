@@ -15,13 +15,9 @@ class ProvidersController < ApplicationController
   end
 
   def branch_from_referer
-    http_referrer.match(/github\.com\/.[^\/]+\/.[^\/]+\/(blob|tree)\/(?<branch>.[^\/]+)/)[:branch]
+    request.referer.match(/github\.com\/.[^\/]+\/.[^\/]+\/(blob|tree)\/(?<branch>.[^\/]+)/)[:branch]
   rescue NoMethodError
     nil
-  end
-
-  def http_referrer
-    request.headers['HTTP_REFERRER'].to_s
   end
 
   def provider
