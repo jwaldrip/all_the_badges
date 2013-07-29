@@ -1,5 +1,3 @@
-require 'active_model'
-
 class Repo
   include ActiveModel::Model
   include SelectiveAttributes
