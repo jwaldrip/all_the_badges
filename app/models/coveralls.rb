@@ -1,3 +1,0 @@
-class Coveralls < Provider
-
-end

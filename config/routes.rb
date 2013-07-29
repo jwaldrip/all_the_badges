@@ -1,4 +1,4 @@
-Siac::Application.routes.draw do
+AllTheBadges::Application.routes.draw do
   root to: 'users#index'
   get '/:user' => 'users#show'
   get '/:user/:repo' => 'repos#show'

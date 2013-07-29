@@ -2,16 +2,11 @@ class BadgeFury < Provider
 
   validates_presence_of :project_type
 
+  link_url "https://badge.fury.io/:project_type/:package_name"
+  image_url "https://badge.fury.io/:project_type/:package_name@2x.png"
+
   def package_name
-    repo.name
-  end
-
-  def link_url
-    "https://badge.fury.io/#{project_type}/#{package_name}"
-  end
-
-  def image_url
-    "https://badge.fury.io/#{project_type}/#{package_name}@2x.png"
+    repo_name
   end
 
   def project_type

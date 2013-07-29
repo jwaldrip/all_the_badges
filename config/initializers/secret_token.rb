@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Siac::Application.config.secret_key_base = '9336757c242cffab46e0eb8be2f15a8583fe76981123668d83225cba9b2ca47bbaeb34e7e77c27a4258e40447deef266e5b7d5edc0ca7c1bb94f10544cdfe8df'
+AllTheBadges::Application.config.secret_key_base = '9336757c242cffab46e0eb8be2f15a8583fe76981123668d83225cba9b2ca47bbaeb34e7e77c27a4258e40447deef266e5b7d5edc0ca7c1bb94f10544cdfe8df'

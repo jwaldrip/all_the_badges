@@ -1,7 +1,11 @@
 class ProvidersController < ApplicationController
 
   def show
-    @provider = Provider.new repo: repo
+    @provider = provider.new repo: repo
+    respond_to do |format|
+      format.png { redirect_to @provider.image_url }
+      format.any { render }
+    end
   end
 
   private
@@ -20,5 +24,8 @@ class ProvidersController < ApplicationController
     request.headers['HTTP_REFERRER'].to_s
   end
 
+  def provider
+    params[:provider].camelize.constantize
+  end
 
 end
