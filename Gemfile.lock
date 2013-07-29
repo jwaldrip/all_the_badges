@@ -217,6 +217,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activemodel (= 4.0.0)
   coffee-rails (~> 4.0.0)
   dalli
   dotenv-rails
