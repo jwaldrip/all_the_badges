@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+# haml
+gem 'haml-rails'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -20,6 +23,9 @@ gem 'github_api'
 
 # Navigable Hash
 gem 'navigable_hash'
+
+# Use thin
+gem "thin"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -43,6 +49,7 @@ group :doc do
 end
 
 gem "oj"
+
 group :development, :test do
   gem 'dotenv-rails'
   gem "factory_girl_rails", "~> 4.2.1"
@@ -57,5 +64,4 @@ group :development, :test do
   gem "rb-fsevent", require: false
   gem "rspec-rails", "~> 2.0"
   gem "terminal-notifier-guard"
-  gem "thin"
 end

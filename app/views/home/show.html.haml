@@ -1,0 +1,15 @@
+.panel.radius
+  %h1
+    All the Badges
+    %small.subheader your one stop destination for dev badges
+  %h4.center Enter a Github repo to find all its badges.
+  = form_tag :find do
+    - if flash[:notice]
+      .alert-box.alert.radius
+        = flash[:notice]
+        = link_to '&times;'.html_safe, '#', class: "close"
+    .row.collapse
+      .small-10.columns
+        = text_field_tag :query, nil, placeholder: 'user or user/repo', class: 'radius'
+      .small-2.columns
+        = submit_tag 'find', class: 'button radius postfix'

@@ -13,7 +13,7 @@ class Provider
       convert_symbols! url
       class_eval <<-RUBY, __FILE__, __LINE__ + 1
         def image_url
-          "#{url}"
+          self.created? ? "#{url}" : create_image_url
         end
       RUBY
     end
@@ -22,7 +22,7 @@ class Provider
       convert_symbols! url
       class_eval <<-RUBY, __FILE__, __LINE__ + 1
         def link_url
-          "#{url}"
+          self.created? ? "#{url}" : create_link_url
         end
       RUBY
     end
@@ -40,6 +40,21 @@ class Provider
       RUBY
     end
 
+    def for_repo(repo)
+      Dir.glob(Rails.root.join 'app', 'providers', '**', '*.rb').map do |provider|
+        klass = File.basename(provider, '.rb').camelize.constantize
+        klass.new repo: repo
+      end.select(&:valid?).sort_by(&:order)
+    end
+
+    def display_name(name = nil)
+      (@display_name ||= name) || self.name.titleize
+    end
+
+    def order(int = nil)
+      (@order ||= int) || 0
+    end
+
     private
 
     def convert_symbols!(string)
@@ -54,8 +69,20 @@ class Provider
   link_url nil
   creatable!
 
-  def creatable?
-    create_link_url.present?
+  def created?
+    true
+  end
+
+  def display_name
+    self.class.display_name
+  end
+
+  def slug
+    self.class.name.underscore
+  end
+
+  def order
+    self.class.order
   end
 
 end

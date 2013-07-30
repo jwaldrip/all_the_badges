@@ -1,3 +1,12 @@
-%body
-  = yield
-  = javascript_include_tag "application"
+.antialiased.off-canvas.hide-extras
+  %nav.top-bar.fixed.contain-to-grid
+    %ul.title-area
+      %li.name
+        %h1
+          = link_to 'All the Badges', root_path
+    .top-bar-section
+      %ul.left
+        %li= link_to 'Find My Badges', root_path
+        // %li= link_to 'About', '#'
+  .row
+    = body

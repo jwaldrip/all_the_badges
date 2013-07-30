@@ -30,7 +30,7 @@ class Content
 
   end
 
-  attr_accessor :repo, :sha, :path
+  attr_accessor :repo, :sha, :path, :name
   attr_writer :content
 
   def read

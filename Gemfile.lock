@@ -82,6 +82,13 @@ GEM
     guard-rspec (3.0.2)
       guard (>= 1.8)
       rspec (~> 2.13)
+    haml (4.0.3)
+      tilt
+    haml-rails (0.4)
+      actionpack (>= 3.1, < 4.1)
+      activesupport (>= 3.1, < 4.1)
+      haml (>= 3.1, < 4.1)
+      railties (>= 3.1, < 4.1)
     hashie (2.0.5)
     hike (1.2.3)
     httpauth (0.2.0)
@@ -225,6 +232,7 @@ DEPENDENCIES
   guard (~> 1.8.0)
   guard-bundler (~> 1.0.0)
   guard-rspec (~> 3.0.0)
+  haml-rails
   jbuilder (~> 1.2)
   jquery-rails
   memcachier

@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Siac::Application.load_tasks
+AllTheBadges::Application.load_tasks

@@ -8,14 +8,14 @@ class Repo
   class << self
 
     def all_by_user(user)
-      cache_key user.cache_key
-      @repos ||= Rails.cache.fetch do
+      cache_key = user.cache_key
+      @repos ||= Rails.cache.fetch cache_key do
         all_by_user_without_cache(user)
       end
     end
 
     def all_by_user_without_cache(user)
-      Github.repos.list(user: user).map { |repo| new(repo) }
+      Github.repos.list(user: user.login).map { |repo| new(repo) }
     end
 
     def find(user, repo, attrs={})
@@ -31,7 +31,7 @@ class Repo
 
   end
 
-  attr_accessor :full_name, :name, :owner, :default_branch
+  attr_accessor :full_name, :name, :owner, :default_branch, :description, :html_url, :language
   attr_writer :branch
 
   def branch
@@ -39,19 +39,19 @@ class Repo
   end
 
   def user
-    @user ||= owner.login
+    @user ||= User.new owner
   end
 
   def contents(path)
     (@contents ||= {})[path] ||= Content.find(self, path)
   end
 
-  def inspect
-    to_s
+  def providers
+    @providers = Provider.for_repo self
   end
 
   def to_s
-    "#<Repo (#{full_name})>"
+    name
   end
 
 end

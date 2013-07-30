@@ -1,0 +1,8 @@
+%h2
+  = @repo.full_name
+  = link_to @repo.html_url do
+    %small.subheader on GitHub
+%p= @repo.description
+%h3.subheader here are all the badges
+- @repo.providers.each do |provider|
+  = render 'provider', provider: provider

@@ -2,8 +2,9 @@ class BadgeFury < Provider
 
   validates_presence_of :project_type
 
+  order 1
   link_url "https://badge.fury.io/:project_type/:package_name"
-  image_url "https://badge.fury.io/:project_type/:package_name@2x.png"
+  image_url "https://badge.fury.io/:project_type/:package_name.png"
 
   def package_name
     repo_name
@@ -16,15 +17,15 @@ class BadgeFury < Provider
   private
 
   def rb?
-    repo.contents('/').find { |file| file.name =~ /\.gemspec/ }
+    repo.language.downcase == 'ruby'
   end
 
   def js?
-    repo.contents('/').find { |file| file.name =~ /package\.json/ }
+    repo.language.downcase == 'javascript'
   end
 
   def py?
-    repo.contents('/').find { |file| file.name =~ /setup\.py/ }
+    repo.language.downcase == 'python'
   end
 
 end

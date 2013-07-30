@@ -1,6 +1,7 @@
 AllTheBadges::Application.routes.draw do
-  root to: 'users#index'
-  get '/:user' => 'users#show'
-  get '/:user/:repo' => 'repos#show'
-  get '/:user/:repo/:provider' => 'providers#show'
+  root to: 'home#show'
+  post '/' => 'find#create', as: :find
+  get '/:user' => 'users#show', as: :user
+  get '/:user/:repo' => 'repos#show', as: :repo
+  get '/:user/:repo/:provider' => 'providers#show', as: :provider
 end

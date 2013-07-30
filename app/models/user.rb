@@ -1,6 +1,7 @@
 class User
   include ActiveModel::Model
   include Cacheable
+  include SelectiveAttributes
 
   cache_keys :login
 
@@ -15,11 +16,15 @@ class User
   end
 
   def repos
-    @repos ||= Repo.by_user self
+    @repos ||= Repo.all_by_user self
   end
 
   def cache_key(*args)
     ([self.class.name, login] + args).compact.join('/')
+  end
+
+  def to_s
+    login
   end
 
 end
