@@ -19,12 +19,12 @@ class User
     @repos ||= Repo.all_by_user self
   end
 
-  def cache_key(*args)
-    ([self.class.name, login] + args).compact.join('/')
-  end
-
   def to_s
     login
+  end
+
+  def github_url
+    "https:://github.com/#{login}"
   end
 
 end

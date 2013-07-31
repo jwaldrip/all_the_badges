@@ -17,15 +17,15 @@ class BadgeFury < Provider
   private
 
   def rb?
-    repo.language.downcase == 'ruby'
+    repo.language.to_s.downcase == 'ruby'
   end
 
   def js?
-    repo.language.downcase == 'javascript'
+    repo.language.to_s.downcase == 'javascript'
   end
 
   def py?
-    repo.language.downcase == 'python'
+    repo.language.to_s.downcase == 'python'
   end
 
 end

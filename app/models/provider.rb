@@ -1,9 +1,13 @@
 class Provider
   include ActiveModel::Model
+  include Cacheable
+
+  cache_keys :user_login, :repo_name, :branch, :slug
 
   attr_accessor :repo
   delegate :branch, :user, to: :repo
   delegate :name, to: :repo, prefix: true
+  delegate :login, to: :user, prefix: true
 
   validates_presence_of :image_url, :link_url
 

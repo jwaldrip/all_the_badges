@@ -1,1 +1,8 @@
-%h1= @user.login
+- content_for :title do
+  All the badges for #{@user.login}
+%h2
+  = @user.login
+  = link_to @user.github_url do
+    %small.subheader on GitHub
+%table
+  = render @user.repos

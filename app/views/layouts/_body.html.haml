@@ -1,4 +1,4 @@
-.antialiased.off-canvas.hide-extras
+.antialiased.off-canvas.hide-extras.content-body
   %nav.top-bar.fixed.contain-to-grid
     %ul.title-area
       %li.name
@@ -10,3 +10,9 @@
         // %li= link_to 'About', '#'
   .row
     = body
+.footer
+  .row
+    %h6.subheader
+      = link_to 'allthebadges.io', root_path
+      \: a creation by
+      = link_to 'Jason Waldrip', user_path('jwaldrip')

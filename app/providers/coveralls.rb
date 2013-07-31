@@ -6,7 +6,9 @@ class Coveralls < Provider
   creatable! link_url: 'https://coveralls.io/', image_url: 'coveralls_unknown.png'
 
   def created?
-    Faraday.get("https://coveralls.io/r/#{user}/#{repo_name}?branch=#{branch}").status == 200
+    Rails.cache.fetch cache_key, expires_in: 60.minutes do
+      Faraday.get("https://coveralls.io/r/#{user}/#{repo_name}?branch=#{branch}").status == 200
+    end
   end
 
 end

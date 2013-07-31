@@ -5,7 +5,7 @@ module Cacheable
     values = self.class.cache_keys.map do |key|
       send(key) || '*'
     end
-    ([self.class.name] + values + args).compact.join('/')
+    ([self.class.name] + values + args).select(&:present?).join('/')
   end
 
   module ClassMethods

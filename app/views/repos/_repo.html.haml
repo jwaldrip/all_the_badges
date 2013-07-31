@@ -1,0 +1,6 @@
+%tr
+  %td
+    = link_to repo.name, repo_path(repo: repo.name)
+  - repo.providers.each do |provider|
+    %td
+      = render 'providers/provider', provider: provider

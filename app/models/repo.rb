@@ -8,25 +8,28 @@ class Repo
   class << self
 
     def all_by_user(user)
-      cache_key = user.cache_key
-      @repos ||= Rails.cache.fetch cache_key do
-        all_by_user_without_cache(user)
+      Rails.cache.fetch user.cache_key, expires_in: 60.minutes do
+        Github.repos.list(user: user.login).map do |repo|
+          find_or_initialize_by repo
+        end
       end
-    end
-
-    def all_by_user_without_cache(user)
-      Github.repos.list(user: user.login).map { |repo| new(repo) }
     end
 
     def find(user, repo, attrs={})
-      cache_key = [:repo, user, repo, attrs.to_param].compact.join('/')
-      Rails.cache.fetch cache_key, expires_in: 60.minutes do
-        new find_without_cache(user, repo, attrs)
-      end
+      find_or_initialize_by attrs.merge login: user, repo: repo
     end
 
-    def find_without_cache(user, repo, attrs={})
-      Github.repos.find(user: user, repo: repo).body.reverse_merge(attrs)
+    def find_or_initialize_by(attrs={})
+      attrs.reject! { |k, v| v.nil? }
+      login, repo = attrs.delete(:login), attrs.delete(:repo)
+      cache_key = User.new(login: login).cache_key(repo, attrs.to_param)
+      Rails.cache.fetch cache_key, expires_in: 1.day do
+        if attrs[:name].present?
+          new(attrs)
+        else
+          new Github.repos.find(user: login, repo: repo).body.reverse_merge(attrs)
+        end
+      end
     end
 
   end
