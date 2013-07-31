@@ -1,3 +1,5 @@
+puts ENV
+
 require 'typhoeus/adapters/faraday'
 
 Github.configure do |config|
