@@ -14,6 +14,8 @@ class Content
       when Hash
         new response
       end
+    rescue Github::Error::NotFound
+      []
     end
 
     def find_without_cache(repo, path)
