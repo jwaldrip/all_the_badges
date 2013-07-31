@@ -4,5 +4,14 @@
   = @user.login
   = link_to @user.github_url do
     %small.subheader on GitHub
-%table
-  = render @user.repos
+.section-container.auto{ data: { section: true } }
+  %section
+    %p.title{ data: { section: { title: true } } }= link_to 'Sources', '#sources'
+    .content{ data: { section: { content: true } } }
+      %table
+        = render @user.repos.reject(&:fork)
+  %section
+    %p.title{ data: { section: { title: true } } }= link_to 'Forks', '#forks'
+    .content{ data: { section: { content: true } } }
+      %table
+        = render @user.repos.select(&:fork)
