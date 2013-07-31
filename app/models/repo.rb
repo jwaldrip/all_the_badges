@@ -9,7 +9,7 @@ class Repo
 
     def all_by_user(user)
       Rails.cache.fetch user.cache_key, expires_in: 60.minutes do
-        Github.repos.list(user: user.login).map do |repo|
+        Github.repos.list(user: user.login, per_page: 1000).map do |repo|
           find_or_initialize_by repo
         end
       end
@@ -34,7 +34,7 @@ class Repo
 
   end
 
-  attr_accessor :full_name, :name, :owner, :default_branch, :description, :html_url, :language
+  attr_accessor :full_name, :name, :owner, :default_branch, :description, :html_url, :language, :fork
   attr_writer :branch
 
   def branch
