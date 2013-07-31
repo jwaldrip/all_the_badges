@@ -1,5 +1,3 @@
-raise ENV.inspect
-
 require 'typhoeus/adapters/faraday'
 
 Github.configure do |config|
@@ -11,5 +9,5 @@ Github.configure do |config|
 end
 
 Github.configure do |config|
-  config.oauth_token = Github.oauth.create(scopes: %{public_repo}).token
+  config.oauth_token = Github.oauth.create(scopes: %{public_repo}).token rescue nil
 end
