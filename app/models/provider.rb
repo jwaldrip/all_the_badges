@@ -2,7 +2,7 @@ class Provider
   include ActiveModel::Model
   include Cacheable
 
-  cache_keys :user_login, :repo_name, :branch, :slug
+  cache_keys :user_login, :repo_name, :branch
 
   attr_accessor :repo
   delegate :branch, :user, to: :repo
