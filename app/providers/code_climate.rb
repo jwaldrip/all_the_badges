@@ -9,6 +9,8 @@ class CodeClimate < Provider
   image_url "https://codeclimate.com/github/:user/:repo_name.png"
   creatable! link_url: 'https://codeclimate.com/github/signup?name=:user%2F:repo_name', image_url: 'code_climate_unknown.png'
 
+  private
+
   def created?
     Rails.cache.fetch cache_key, expires_in: 60.minutes do
       Faraday.get("https://codeclimate.com/github/#{user}/#{repo_name}").status == 200

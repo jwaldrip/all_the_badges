@@ -6,6 +6,8 @@ class BadgeFury < Provider
   link_url "https://badge.fury.io/:project_type/:package_name"
   image_url "https://badge.fury.io/:project_type/:package_name.png"
 
+  private
+
   def package_name
     repo_name
   end
@@ -13,8 +15,6 @@ class BadgeFury < Provider
   def project_type
     [:rb, :js, :py].find { |type| send "#{type}?" }
   end
-
-  private
 
   def rb?
     language_is?(:ruby) && contains_gemspec?

@@ -17,7 +17,7 @@ class Provider
       convert_symbols! url
       class_eval <<-RUBY, __FILE__, __LINE__ + 1
         def image_url
-          self.created? ? "#{url}" : create_image_url
+          created? ? "#{url}" : create_image_url
         end
       RUBY
     end
@@ -26,7 +26,7 @@ class Provider
       convert_symbols! url
       class_eval <<-RUBY, __FILE__, __LINE__ + 1
         def link_url
-          self.created? ? "#{url}" : create_link_url
+          created? ? "#{url}" : create_link_url
         end
       RUBY
     end
@@ -73,14 +73,6 @@ class Provider
   link_url nil
   creatable!
 
-  def created?
-    true
-  end
-
-  def language_is?(lang)
-    repo.language.to_s.downcase.to_sym == lang.to_s.downcase.to_sym
-  end
-
   def display_name
     self.class.display_name
   end
@@ -91,6 +83,16 @@ class Provider
 
   def order
     self.class.order
+  end
+
+  private
+
+  def created?
+    true
+  end
+
+  def language_is?(lang)
+    repo.language.to_s.downcase.to_sym == lang.to_s.downcase.to_sym
   end
 
 end
