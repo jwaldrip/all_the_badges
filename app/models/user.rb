@@ -24,7 +24,7 @@ class User
   end
 
   def github_url
-    "https:://github.com/#{login}"
+    "https://github.com/#{login}"
   end
 
 end
