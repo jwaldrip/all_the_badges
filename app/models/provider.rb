@@ -77,6 +77,10 @@ class Provider
     true
   end
 
+  def language_is?(lang)
+    repo.language.to_s.downcase.to_sym == lang.to_s.downcase.to_sym
+  end
+
   def display_name
     self.class.display_name
   end
