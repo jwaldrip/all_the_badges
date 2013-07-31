@@ -1,4 +1,4 @@
-class Repo
+class GithubApi::Repo
   include ActiveModel::Model
   include SelectiveAttributes
   include Cacheable

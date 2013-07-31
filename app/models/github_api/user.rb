@@ -1,4 +1,4 @@
-class User
+class GithubApi::User
   include ActiveModel::Model
   include Cacheable
   include SelectiveAttributes

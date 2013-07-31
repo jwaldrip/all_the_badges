@@ -1,4 +1,4 @@
-class Provider
+class GithubApi::Provider
   include ActiveModel::Model
   include Cacheable
 
