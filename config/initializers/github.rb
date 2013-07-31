@@ -1,4 +1,4 @@
-puts ENV
+puts ENV.inspect
 
 require 'typhoeus/adapters/faraday'
 
