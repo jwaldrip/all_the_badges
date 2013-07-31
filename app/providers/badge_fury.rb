@@ -17,15 +17,27 @@ class BadgeFury < Provider
   private
 
   def rb?
-    repo.language.to_s.downcase == 'ruby'
+    language_is?(:ruby) && contains_gemspec?
+  end
+
+  def contains_gemspec?
+    repo.contents('/').any? { |file| file.name =~ /\.gemspec/ }
   end
 
   def js?
-    repo.language.to_s.downcase == 'javascript'
+    language_is?(:javascript) && contains_package_json?
+  end
+
+  def contains_package_json?
+    repo.contents('/').any? { |file| file.name =~ /package\.json/ }
   end
 
   def py?
-    repo.language.to_s.downcase == 'python'
+    language_is?(:python) && contains_setup_script?
+  end
+
+  def contains_setup_script?
+    repo.contents('/').any? { |file| file.name =~ /setup\.py/ }
   end
 
 end
