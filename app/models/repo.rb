@@ -34,11 +34,7 @@ class Repo < ActiveRecord::Base
   end
 
   def providers
-    @providers = Provider.for_repo self
-  end
-
-  def to_s
-    name
+    @providers ||= Provider.for_repo self
   end
 
 end

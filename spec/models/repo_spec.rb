@@ -44,4 +44,47 @@ describe Repo, vcr: github_cassette do
 
   end
 
+  describe '#branch' do
+    context 'if a branch is set' do
+      it 'should use the set branch' do
+        repo.branch = 'hello'
+        repo.branch.should eq 'hello'
+      end
+    end
+
+    context 'if a branch is not set' do
+      it 'should call the default branch' do
+        expect(repo).to receive :default_branch
+        repo.branch
+      end
+    end
+  end
+
+  describe '#contents' do
+    let(:path){ '/' }
+    it 'should change the value of the memoized hash' do
+      expect { repo.contents path }.to change {
+        repo.instance_variable_get(:@contents)
+      }.to have_key path
+    end
+
+    it 'should call Content.find with the repo and path' do
+      expect(Content).to receive(:find).with(repo, path)
+      repo.contents path
+    end
+  end
+
+  describe '#providers' do
+    it 'should call Provider#for_repo with the repo' do
+      expect(Provider).to receive(:for_repo).with repo
+      repo.providers
+    end
+
+    it 'should be memoized' do
+      expect(Provider).to receive(:for_repo) { 'something' }.once
+      expect { repo.providers }.to change { repo.instance_variable_get :@providers }
+      repo.providers
+    end
+  end
+
 end
