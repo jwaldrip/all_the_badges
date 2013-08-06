@@ -1,4 +1,4 @@
-class GithubApi::Content
+class Content
   include ActiveModel::Model
   include SelectiveAttributes
 
