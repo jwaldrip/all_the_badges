@@ -5,6 +5,7 @@ ruby '2.0.0'
 # Core Frameworks
 gem 'rails', '4.0.0'
 gem "thin"
+gem 'pg'
 # gem 'turbolinks'
 gem "oj"
 
@@ -40,10 +41,15 @@ group :development, :test do
   gem "guard", "~> 1.8.0"
   gem "guard-bundler", "~> 1.0.0"
   gem "guard-rspec", "~> 3.0.0"
+  gem "shoulda-matchers"
+  gem "vcr"
+  gem "database_cleaner"
   gem "pry-debugger"
   gem "pry-remote"
   gem "rb-inotify", require: false
   gem "rb-fsevent", require: false
-  gem "rspec-rails", "~> 2.0"
+  gem "rspec-rails", "~> 2.14"
+  gem "simplecov"
+  # gem "coveralls"
   gem "terminal-notifier-guard"
 end
