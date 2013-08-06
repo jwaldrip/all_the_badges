@@ -9,5 +9,6 @@ Github.configure do |config|
 end
 
 Github.configure do |config|
-  config.oauth_token = Github.oauth.create(scopes: %{public_repo}).token rescue nil
+  config.oauth_token = ENV['GITHUB_DEFAULT_TOKEN'] ||
+    Github.oauth.create(scopes: %{public_repo}).token rescue nil
 end
