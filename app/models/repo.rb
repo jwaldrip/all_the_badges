@@ -16,6 +16,16 @@ class Repo < ActiveRecord::Base
       all
     end
 
+    def find_or_fetch(user: nil, name: nil)
+      find_by(user_id: user.try(:id), name: name) || fetch(user: user, name: name)
+    end
+
+    private
+
+    def fetch(user: nil, name: nil)
+      create extract_valid_attributes Github.repos.get user: user.login, repo: name
+    end
+
   end
 
   belongs_to :user
