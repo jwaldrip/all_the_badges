@@ -32,7 +32,7 @@ class ProvidersController < ApplicationController
   end
 
   def provider
-    params[:provider].camelize.constantize
+    Provider.from_slug params[:provider]
   end
 
 end

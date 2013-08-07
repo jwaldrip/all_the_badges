@@ -5,11 +5,4 @@ class Travis < Provider
   image_url 'https://travis-ci.org/:user/:repo_name.png?branch=:branch'
   creatable! link_url: 'http://travis-ci.org', image_url: 'travis_unknown.png'
 
-  def created?
-    Rails.cache.fetch cache_key, expires_in: 60.minutes do
-      Faraday.get("https://travis-ci.org/#{user}/#{repo_name}.png?branch=#{branch}").status == 200
-    end
-  end
-
-
 end

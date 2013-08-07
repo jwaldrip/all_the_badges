@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20130731214947) do
     t.string   "html_url"
     t.string   "language"
     t.boolean  "fork"
+    t.boolean  "is_package"
+    t.boolean  "contains_bundle"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

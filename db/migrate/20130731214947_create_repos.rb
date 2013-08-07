@@ -9,6 +9,8 @@ class CreateRepos < ActiveRecord::Migration
       t.string :html_url
       t.string :language
       t.boolean :fork
+      t.boolean :is_package
+      t.boolean :contains_bundle
       t.timestamps
     end
   end

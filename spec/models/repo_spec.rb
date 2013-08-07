@@ -105,7 +105,7 @@ describe Repo, vcr: github_cassette, clean_db: true do
   end
 
   describe '#contents' do
-    let(:path){ '/' }
+    let(:path) { '/' }
     it 'should change the value of the memoized hash' do
       expect { repo.contents path }.to change {
         repo.instance_variable_get(:@contents)
@@ -128,6 +128,182 @@ describe Repo, vcr: github_cassette, clean_db: true do
       expect(Provider).to receive(:for_repo) { 'something' }.once
       expect { repo.providers }.to change { repo.instance_variable_get :@providers }
       repo.providers
+    end
+  end
+
+  describe '#language_is?' do
+    context 'if the language matches' do
+      it 'should return true' do
+        pending
+      end
+    end
+
+    context 'if the does not match' do
+      it 'should return false' do
+        pending
+      end
+    end
+  end
+
+  describe '#determine_if_is_package' do
+    context 'containing a .gemspec' do
+      it 'should set is_package to true' do
+        pending
+      end
+    end
+
+    context 'containing a package.json' do
+      it 'should set is_package to true' do
+        pending
+      end
+    end
+
+    context 'containing a setup.py' do
+      it 'should set is_package to true' do
+        pending
+      end
+    end
+
+    context 'containing none of the above' do
+      it 'should set is_package to false' do
+        pending
+      end
+    end
+  end
+
+  describe '#determine_if_contains_bundle' do
+    context 'containing a Gemfile' do
+      it 'should set contains_bundle to true' do
+        pending
+      end
+    end
+
+    context 'containing a present node_modules directory' do
+      it 'should set contains_bundle to true' do
+        pending
+      end
+    end
+
+    context 'containing none of the above' do
+      it 'should set contains_bundle to false' do
+        pending
+      end
+    end
+  end
+
+  describe '#contains_gemspec?' do
+    context 'i not ruby' do
+      it 'should be false' do
+        pending
+      end
+    end
+
+    context 'is ruby' do
+      context 'has a .gemspec' do
+        it 'should be true' do
+          pending
+        end
+      end
+
+      context 'does not have a .gemspec' do
+        it 'should be false' do
+          pending
+        end
+      end
+    end
+  end
+
+  describe '#contains_package_json?' do
+    context 'is not javascript' do
+      it 'should be false' do
+        pending
+      end
+    end
+
+    context 'is javascript' do
+      context 'has a package.json' do
+        it 'should be true' do
+          pending
+        end
+      end
+
+      context 'does not have a package.json' do
+        it 'should be false' do
+          pending
+        end
+      end
+    end
+  end
+
+  describe '#contains_setup_script?' do
+    context 'is not python' do
+      it 'should be false' do
+        pending
+      end
+    end
+
+    context 'is python' do
+      context 'has a setup.py' do
+        it 'should be true' do
+          pending
+        end
+      end
+
+      context 'does not have a setup.py' do
+        it 'should be false' do
+          pending
+        end
+      end
+    end
+  end
+
+  describe '#contains_gemfile?' do
+    context 'is not ruby' do
+      it 'should be false' do
+        pending
+      end
+    end
+
+    context 'is ruby' do
+      context 'has a Gemfile' do
+        it 'should be true' do
+          pending
+        end
+      end
+
+      context 'does not have a Gemfile' do
+        it 'should be false' do
+          pending
+        end
+      end
+    end
+  end
+
+  describe '#contains_node_modules?' do
+    context 'is not javascript' do
+      it 'should be false' do
+        pending
+      end
+    end
+
+    context 'is javascript' do
+      context 'has a present node_modules directory' do
+        it 'should be true' do
+          pending
+        end
+      end
+
+      context 'has a empty node_modules directory' do
+        it 'should be false' do
+          pending
+        end
+      end
+
+      context 'does not have a node_modules directory' do
+        it 'should be false' do
+          pending
+        end
+      end
     end
   end
 

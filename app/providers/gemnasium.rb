@@ -1,6 +1,6 @@
 class Gemnasium < Provider
 
-  validates_presence_of :ruby?, :contains_gemfile?
+  validates_presence_of :ruby?, :contains_bundle?
 
   order 2
   link_url "https://gemnasium.com/:user/:repo_name"
@@ -11,16 +11,6 @@ class Gemnasium < Provider
 
   def ruby?
     language_is?(:ruby)
-  end
-
-  def created?
-    Rails.cache.fetch cache_key, expires_in: 60.minutes do
-      Faraday.get("https://gemnasium.com/#{user}/#{repo_name}.png").status == 200
-    end
-  end
-
-  def contains_gemfile?
-    repo.contents('/').any? { |file| file.name =~ /Gemfile/ }
   end
 
 end

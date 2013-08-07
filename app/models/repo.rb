@@ -30,6 +30,9 @@ class Repo < ActiveRecord::Base
 
   belongs_to :user
   attr_writer :branch
+  delegate :login, to: :user, prefix: true, allow_nil: true
+  before_save :determine_if_is_package
+  before_save :determine_if_contains_bundle
 
   def branch
     @branch || default_branch
@@ -45,6 +48,44 @@ class Repo < ActiveRecord::Base
 
   def providers
     @providers ||= Provider.for_repo self
+  end
+
+  def language_is?(lang)
+    language.to_s.downcase.to_sym == lang.to_s.downcase.to_sym
+  end
+
+  private
+
+  def determine_if_is_package
+    self.is_package = contains_gemspec? || contains_package_json? || contains_setup_script?
+    true
+  end
+
+  def determine_if_contains_bundle
+    self.contains_bundle = contains_gemfile? || contains_node_modules?
+    true
+  end
+
+  def contains_gemspec?
+    language_is?(:ruby) && contents('/').any? { |file| file.name =~ /\.gemspec/ }
+  end
+
+  def contains_package_json?
+    language_is?(:javascript) && contents('/').any? { |file| file.name =~ /package\.json/ }
+  end
+
+  def contains_setup_script?
+    language_is?(:python) && contents('/').any? { |file| file.name =~ /setup\.py/ }
+  end
+
+  def contains_gemfile?
+    contents('/').any? { |file| file.name =~ /Gemfile/ }
+  end
+
+  def contains_node_modules?
+    language_is?(:javascript) && contents('/node_modules').present?
+  rescue Github::Error::NotFound
+    false
   end
 
 end

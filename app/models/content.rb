@@ -19,7 +19,7 @@ class Content
     end
 
     def find_without_cache(repo, path)
-      Github.repos.contents.find(repo.user.login, repo.name, path, ref: repo.branch).body
+      Github.repos.contents.find(repo.user_login.to_s, repo.name.to_s, path, ref: repo.branch.to_s).body
     end
 
     def new_collection_from_response(response, repo)

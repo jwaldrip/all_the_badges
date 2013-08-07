@@ -5,19 +5,21 @@ class Provider
   cache_keys :user_login, :repo_name, :branch
 
   attr_accessor :repo
-  delegate :branch, :user, to: :repo
+  delegate :branch, :is_package?, :contains_bundle?, :language_is?, :user, to: :repo
   delegate :name, to: :repo, prefix: true
   delegate :login, to: :user, prefix: true
 
   validates_presence_of :image_url, :link_url
+
+  InvalidProvider = Class.new(StandardError)
 
   class << self
 
     def image_url(url)
       convert_symbols! url
       class_eval <<-RUBY, __FILE__, __LINE__ + 1
-        def image_url
-          created? ? "#{url}" : create_image_url
+        def raw_image_url
+          "#{url}"
         end
       RUBY
     end
@@ -25,8 +27,8 @@ class Provider
     def link_url(url)
       convert_symbols! url
       class_eval <<-RUBY, __FILE__, __LINE__ + 1
-        def link_url
-          created? ? "#{url}" : create_link_url
+        def raw_link_url
+          "#{url}"
         end
       RUBY
     end
@@ -44,19 +46,41 @@ class Provider
       RUBY
     end
 
+    def from_slug(slug)
+      const = slug.camelize.constantize
+      const.in? descendants ? const : (raise InvalidProvider, "#{const} is not a valid #{name}")
+    rescue NameError
+      raise InvalidProvider, "Could not locate a matching constant for #{slug}"
+    end
+
     def for_repo(repo)
-      Dir.glob(Rails.root.join 'app', 'providers', '**', '*.rb').map do |provider|
-        klass = File.basename(provider, '.rb').camelize.constantize
+      list.map do |provider|
+        klass = provider.camelize.constantize
         klass.new repo: repo
       end.select(&:valid?).sort_by(&:order)
     end
 
-    def display_name(name = nil)
-      (@display_name ||= name) || self.name.titleize
+    def list
+      base_dir = Rails.root.join 'app', 'providers'
+      Dir.glob(base_dir.join '**', '*.rb').map do |provider|
+        provider.gsub(/^#{base_dir}\/(.*)\.rb$/, "\\1").camelize.constantize
+      end.select { |provider| provider.in? descendants }
     end
 
-    def order(int = nil)
-      (@order ||= int) || 0
+    def display_name(name = nil)
+      class_eval <<-RUBY, __FILE__, __LINE__ + 1
+        def display_name
+          '#{name}'.present? ? '#{name}' : self.class.name.titleize
+        end
+      RUBY
+    end
+
+    def order(int)
+      class_eval <<-RUBY, __FILE__, __LINE__ + 1
+        def order
+          #{int}
+        end
+      RUBY
     end
 
     private
@@ -69,30 +93,30 @@ class Provider
 
   end
 
+  display_name nil
   image_url nil
   link_url nil
   creatable!
-
-  def display_name
-    self.class.display_name
-  end
+  order 99
 
   def slug
     self.class.name.underscore
   end
 
-  def order
-    self.class.order
+  def image_url
+    created? ? raw_image_url : create_image_url
+  end
+
+  def link_url
+    created? ? raw_link_url : create_link_url
   end
 
   private
 
   def created?
-    true
-  end
-
-  def language_is?(lang)
-    repo.language.to_s.downcase.to_sym == lang.to_s.downcase.to_sym
+    Rails.cache.fetch cache_key, expires_in: 60.minutes do
+      Faraday.get(raw_image_url).status == 200
+    end
   end
 
 end
