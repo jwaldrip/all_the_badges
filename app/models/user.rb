@@ -6,13 +6,13 @@ class User < ActiveRecord::Base
 
   class << self
 
-    def find_by_login(login)
-      find_by(login: login) || fetch_user(login)
+    def find_or_fetch(login: nil)
+      find_by(login: login) || fetch(login: login)
     end
 
     private
 
-    def fetch_user(login)
+    def fetch(login: nil)
       create extract_valid_attributes Github.users.find(user: login).body
     end
 
