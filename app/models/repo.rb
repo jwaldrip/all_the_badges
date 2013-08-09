@@ -51,7 +51,7 @@ class Repo < ActiveRecord::Base
   end
 
   def language_is?(lang)
-    language.to_s.downcase.to_sym == lang.to_s.downcase.to_sym
+    language.to_s.downcase.parameterize('_') == lang.to_s.downcase.parameterize('_')
   end
 
   private

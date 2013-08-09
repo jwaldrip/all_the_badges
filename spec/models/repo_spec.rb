@@ -132,179 +132,239 @@ describe Repo, vcr: github_cassette, clean_db: true do
   end
 
   describe '#language_is?' do
+    subject(:repo) { FactoryGirl.create :repo, language: 'Foo Lang' }
     context 'if the language matches' do
       it 'should return true' do
-        pending
+        repo.language_is?(:foo_lang).should be_true
       end
     end
 
     context 'if the does not match' do
       it 'should return false' do
-        pending
+        repo.language_is?(:bar_lang).should be_false
       end
     end
   end
 
   describe '#determine_if_is_package' do
+
+    before(:each) do
+      allow(repo).to receive(:contains_gemspec?) { false }
+      allow(repo).to receive(:contains_package_json?) { false }
+      allow(repo).to receive(:contains_setup_script?) { false }
+    end
+
     context 'containing a .gemspec' do
       it 'should set is_package to true' do
-        pending
+        allow(repo).to receive(:contains_gemspec?) { true }
+        expect { repo.send(:determine_if_is_package) }.to change {
+          repo.is_package
+        }.to be_true
       end
     end
 
     context 'containing a package.json' do
       it 'should set is_package to true' do
-        pending
+        allow(repo).to receive(:contains_package_json?) { true }
+        expect { repo.send(:determine_if_is_package) }.to change {
+          repo.is_package
+        }.to be_true
       end
     end
 
     context 'containing a setup.py' do
       it 'should set is_package to true' do
-        pending
+        allow(repo).to receive(:contains_setup_script?) { true }
+        expect { repo.send(:determine_if_is_package) }.to change {
+          repo.is_package
+        }.to be_true
       end
     end
 
     context 'containing none of the above' do
       it 'should set is_package to false' do
-        pending
+        repo.send(:determine_if_is_package)
+        repo.is_package.should be_false
       end
     end
+
   end
 
   describe '#determine_if_contains_bundle' do
+
+    before(:each) do
+      allow(repo).to receive(:contains_gemfile?) { false }
+      allow(repo).to receive(:contains_node_modules?) { false }
+    end
+
     context 'containing a Gemfile' do
       it 'should set contains_bundle to true' do
-        pending
+        allow(repo).to receive(:contains_gemfile?) { true }
+        expect { repo.send(:determine_if_contains_bundle) }.to change {
+          repo.contains_bundle
+        }.to be_true
       end
     end
 
     context 'containing a present node_modules directory' do
       it 'should set contains_bundle to true' do
-        pending
+        allow(repo).to receive(:contains_node_modules?) { true }
+        expect { repo.send(:determine_if_contains_bundle) }.to change {
+          repo.contains_bundle
+        }.to be_true
       end
     end
 
     context 'containing none of the above' do
       it 'should set contains_bundle to false' do
-        pending
+        repo.send(:determine_if_contains_bundle)
+        repo.contains_bundle.should be_false
       end
     end
+
   end
 
-  describe '#contains_gemspec?' do
-    context 'i not ruby' do
-      it 'should be false' do
-        pending
-      end
+  context do
+
+    let(:language) { nil }
+    let(:file_name) { 'readme.txt' }
+    subject(:repo) { Repo.new language: language }
+    before(:each) do
+      allow(repo).to receive(:contents) {
+        [Content.new(repo: repo, name: file_name, content: Base64.encode64('something here'))]
+      }
     end
 
-    context 'is ruby' do
-      context 'has a .gemspec' do
-        it 'should be true' do
-          pending
-        end
-      end
+    describe '#contains_gemspec?' do
 
-      context 'does not have a .gemspec' do
+      context 'is not ruby' do
         it 'should be false' do
-          pending
-        end
-      end
-    end
-  end
-
-  describe '#contains_package_json?' do
-    context 'is not javascript' do
-      it 'should be false' do
-        pending
-      end
-    end
-
-    context 'is javascript' do
-      context 'has a package.json' do
-        it 'should be true' do
-          pending
+          repo.send(:contains_gemspec?).should be_false
         end
       end
 
-      context 'does not have a package.json' do
+      context 'is ruby' do
+        let(:language){ 'Ruby' }
+        context 'has a .gemspec' do
+          let(:file_name){ 'foo.gemspec' }
+          it 'should be true' do
+            repo.send(:contains_gemspec?).should be_true
+          end
+        end
+
+        context 'does not have a .gemspec' do
+          it 'should be false' do
+            repo.send(:contains_gemspec?).should be_false
+          end
+        end
+      end
+
+    end
+
+    describe '#contains_package_json?' do
+
+      context 'is not javascript' do
         it 'should be false' do
-          pending
-        end
-      end
-    end
-  end
-
-  describe '#contains_setup_script?' do
-    context 'is not python' do
-      it 'should be false' do
-        pending
-      end
-    end
-
-    context 'is python' do
-      context 'has a setup.py' do
-        it 'should be true' do
-          pending
+          repo.send(:contains_package_json?).should be_false
         end
       end
 
-      context 'does not have a setup.py' do
+      context 'is javascript' do
+        let(:language){ 'Javascript' }
+        context 'has a package.json' do
+          let(:file_name){ 'package.json' }
+          it 'should be true' do
+            repo.send(:contains_package_json?).should be_true
+          end
+        end
+
+        context 'does not have a package.json' do
+          it 'should be false' do
+            repo.send(:contains_package_json?).should be_false
+          end
+        end
+      end
+
+    end
+
+    describe '#contains_setup_script?' do
+
+      context 'is not python' do
         it 'should be false' do
-          pending
-        end
-      end
-    end
-  end
-
-  describe '#contains_gemfile?' do
-    context 'is not ruby' do
-      it 'should be false' do
-        pending
-      end
-    end
-
-    context 'is ruby' do
-      context 'has a Gemfile' do
-        it 'should be true' do
-          pending
+          repo.send(:contains_setup_script?).should be_false
         end
       end
 
-      context 'does not have a Gemfile' do
-        it 'should be false' do
-          pending
+      context 'is python' do
+        let(:language){ 'Python' }
+        context 'has a setup.py' do
+          let(:file_name){ 'setup.py' }
+          it 'should be true' do
+            repo.send(:contains_setup_script?).should be_true
+          end
         end
-      end
-    end
-  end
 
-  describe '#contains_node_modules?' do
-    context 'is not javascript' do
-      it 'should be false' do
-        pending
-      end
-    end
-
-    context 'is javascript' do
-      context 'has a present node_modules directory' do
-        it 'should be true' do
-          pending
+        context 'does not have a setup.py' do
+          it 'should be false' do
+            repo.send(:contains_setup_script?).should be_false
+          end
         end
       end
 
-      context 'has a empty node_modules directory' do
+    end
+
+    describe '#contains_gemfile?' do
+
+      context 'is not ruby' do
         it 'should be false' do
           pending
         end
       end
 
-      context 'does not have a node_modules directory' do
+      context 'is ruby' do
+        context 'has a Gemfile' do
+          it 'should be true' do
+            pending
+          end
+        end
+
+        context 'does not have a Gemfile' do
+          it 'should be false' do
+            pending
+          end
+        end
+      end
+
+    end
+
+    describe '#contains_node_modules?' do
+
+      context 'is not javascript' do
         it 'should be false' do
           pending
         end
       end
+
+      context 'is javascript' do
+        context 'has a present node_modules directory' do
+          it 'should be true' do
+            pending
+          end
+        end
+
+        context 'has a empty node_modules directory' do
+          it 'should be false' do
+            pending
+          end
+        end
+
+        context 'does not have a node_modules directory' do
+          it 'should be false' do
+            pending
+          end
+        end
+      end
+
     end
   end
-
 end
