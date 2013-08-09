@@ -4700,4 +4700,1980 @@ http_interactions:
       string: '{"message":"Not Found"}'
     http_version: 
   recorded_at: Wed, 07 Aug 2013 15:52:27 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/e304522c69793ab7a443784b62b791fb/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 03:47:00 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4999'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 03:47:03 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/d7b7b4ad5fe028c4e55efebf055927f9/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 03:47:01 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4998'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 03:47:04 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/bd94231b3a69584e1c5525485abab49c/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 03:48:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4997'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 03:48:17 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/2ad7b145acb7cd1a828fd636fd21296b/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 03:48:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4996'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 03:48:18 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/704cd2713f1d1b36fd5f26ca47536db5/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 03:49:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4995'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 03:49:57 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/5b92cbd0d572dc3baba3211118b33f70/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 03:49:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4994'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 03:49:58 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/10fdabf1d13f296bd44e1dc677b03a9e/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 03:50:34 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4993'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 03:50:37 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/1447bda8dd1d2b1f5728554930b23352/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 03:50:34 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4992'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 03:50:38 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/c3a309e5537b8e1941872185133b10c5/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:00:13 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4991'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:00:16 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/60e90a72f0b39ceb924480143bd38a4a/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:00:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4990'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:00:17 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/570f28a5d4d1ff6a59fcfebea8cf85b0/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:00:40 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4989'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:00:43 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/b68f6faba2729a1312715ad6b0f456d6/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:00:40 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4988'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:00:44 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/ed256b6508a88e887b854cdd441e1ebb/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:01:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4987'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:01:23 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/a46f6430a498de420cc433456a88cc77/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:01:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4986'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:01:24 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/94ce63df49a9e71de581de632ae7858c/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:08:37 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4985'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:08:40 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/6c0ef26852ad19a11e1632ebd6282b64/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:08:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4984'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:08:41 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/dfc105257220aaa6829d7ea04d8fd152/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:09:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4983'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:09:12 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/8671ee6fa28e09dfc6bf2af3da307603/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:09:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4982'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:09:13 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/cf4984c33ff8bff21e568e845b694b59/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:10:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4981'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:10:24 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/7a293b509768bdfeed2d13c612fe66c2/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:10:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4980'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:10:25 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/96c47fbfb6602fe04de34a545cfcc0dd/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:11:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4979'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:11:05 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/2fd3d7190a16cdc6ed16f39d1325581b/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:11:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4978'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:11:05 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/0e2ce356fff3a1ab520ff58381962fcf/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:11:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4977'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:11:45 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/ef50c0cf3b6b343dab112ca0632b425b/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:11:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4976'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:11:45 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/6d79867a2e6e3b1f2ac31fa4e911ac65/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:12:41 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4975'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:12:44 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/12605684c9e1fda632506bd27a2f36a0/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:12:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4974'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:12:45 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/0b6533fa845f5fcb8402eb1c2857eb18/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:14:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4973'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:14:34 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/344d2034d29a50151699ac9e70ef993b/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:14:31 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4972'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:14:34 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/445bcdf306c5bda2aed4506fa6bea645/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:14:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4971'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:14:54 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/fe611c489116801609ba9800a67466f5/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:14:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4970'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:14:55 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/bd4d15fc06aa6c3ab5b27475bbdcc763/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:16:46 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4969'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:16:49 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/95adbb3f42436f61a8296c74c7c204bc/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:16:46 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4968'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:16:49 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/014870471a9dfc857de0bd554de66860/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:18:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4967'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:18:32 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/8429eb875a25077de4559be126b5c95f/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:18:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4966'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:18:33 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/9bd22f66844319dc9605f3817cc20384/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:19:03 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4965'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:19:07 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/96d3f1f2099e8a17b60b1294d6dae629/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:19:04 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4964'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:19:07 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/c5b50b9b0258b776ee36005558ab249a/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:20:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4963'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:20:28 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/ad6ce7fcc322aa6c3c48ea4951546aff/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 08 Aug 2013 04:20:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4962'
+      X-RateLimit-Reset:
+      - '1375937220'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '23'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found"}'
+    http_version: 
+  recorded_at: Thu, 08 Aug 2013 04:20:28 GMT
 recorded_with: VCR 2.5.0
