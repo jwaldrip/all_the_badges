@@ -140,7 +140,31 @@ describe Provider, vcr: github_cassette do
   end
 
   describe '.list' do
+    let(:providers) do
+      3.times.each_with_index.map do |i|
+        name = "SampleProvider#{i+1}"
+        klass = Class.new(Provider)
+        stub_const name, klass
+        Rails.root.join('app', 'providers', name.underscore + '.rb').to_s
+      end
+    end
 
+    before(:each) do
+      allow(Dir).to receive(:glob).and_return(providers)
+    end
+
+    it 'should return providers' do
+      Provider.list.size.should eq providers.size
+    end
+
+    it 'should not raise an error' do
+      expect { Provider.list }.to_not raise_error
+    end
+
+    it 'should not return classes that are not descendants of Provider' do
+      providers << Rails.root.join('app', 'providers', 'object.rb').to_s
+      Provider.list.should_not include Object
+    end
   end
 
   describe '.display_name' do
@@ -164,6 +188,13 @@ describe Provider, vcr: github_cassette do
         Provider.display_name 'Something'
         provider.display_name.should eq 'Something'
       end
+    end
+  end
+
+  describe '#slug' do
+    it 'should be the class constant underscored' do
+      stub_const 'SampleProvider', Class.new(Provider)
+      SampleProvider.new.slug.should eq 'sample_provider'
     end
   end
 
