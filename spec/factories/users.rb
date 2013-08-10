@@ -2,5 +2,6 @@
 
 FactoryGirl.define do
   factory :user do
+    login 'all-the-badges-app'
   end
 end

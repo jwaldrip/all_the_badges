@@ -2,5 +2,7 @@
 
 FactoryGirl.define do
   factory :repo do
+    user
+    name 'all_the_badges'
   end
 end

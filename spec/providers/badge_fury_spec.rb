@@ -1,15 +1,7 @@
 require 'spec_helper'
 
-describe BadgeFury do
-
-  let(:attrs){}
-  let(:methods){}
-  subject(:provider) do
-    repo = FactoryGirl.build(:repo, attrs || {})
-    mock_methods = methods || {}
-    mock_methods.each { |k,v| allow(repo).to receive(k).and_return(v) }
-    described_class.new repo: repo
-  end
+describe BadgeFury, vcr: github_cassette do
+  include_context 'provider stub'
 
   describe '#package_name' do
     it 'should call #repo_name' do
