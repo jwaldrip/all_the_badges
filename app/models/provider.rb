@@ -56,8 +56,7 @@ class Provider
 
     def for_repo(repo)
       list.map do |provider|
-        klass = provider.camelize.constantize
-        klass.new repo: repo
+        provider.new repo: repo
       end.select(&:valid?).sort_by(&:order)
     end
 

@@ -5,6 +5,15 @@ describe Provider, vcr: github_cassette do
   let(:repo) { Repo.find_or_fetch(user: user, name: 'all_the_badges') }
   subject(:provider) { Provider.new repo: repo }
 
+  # Resets the class
+  before(:each) do
+    Provider.display_name nil
+    Provider.image_url nil
+    Provider.link_url nil
+    Provider.creatable!
+    Provider.order 99
+  end
+
   it { should delegate(:branch).to(:repo) }
   it { should delegate(:name).to(:repo).with_prefix }
   it { should delegate(:login).to(:user).with_prefix }
@@ -96,7 +105,14 @@ describe Provider, vcr: github_cassette do
   end
 
   describe '.for_repo' do
-    pending
+    it 'should map over list' do
+      list_double = double
+      expect(list_double).to receive(:map){ [provider] }
+      expect(Provider).to receive(:list).and_return(list_double)
+      Provider.for_repo repo
+    end
+
+    it 'should '
   end
 
   describe '.list' do
