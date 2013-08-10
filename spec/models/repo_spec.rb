@@ -244,9 +244,9 @@ describe Repo, vcr: github_cassette, clean_db: true do
       end
 
       context 'is ruby' do
-        let(:language){ 'Ruby' }
+        let(:language) { 'Ruby' }
         context 'has a .gemspec' do
-          let(:file_name){ 'foo.gemspec' }
+          let(:file_name) { 'foo.gemspec' }
           it 'should be true' do
             repo.send(:contains_gemspec?).should be_true
           end
@@ -270,9 +270,9 @@ describe Repo, vcr: github_cassette, clean_db: true do
       end
 
       context 'is javascript' do
-        let(:language){ 'Javascript' }
+        let(:language) { 'Javascript' }
         context 'has a package.json' do
-          let(:file_name){ 'package.json' }
+          let(:file_name) { 'package.json' }
           it 'should be true' do
             repo.send(:contains_package_json?).should be_true
           end
@@ -296,9 +296,9 @@ describe Repo, vcr: github_cassette, clean_db: true do
       end
 
       context 'is python' do
-        let(:language){ 'Python' }
+        let(:language) { 'Python' }
         context 'has a setup.py' do
-          let(:file_name){ 'setup.py' }
+          let(:file_name) { 'setup.py' }
           it 'should be true' do
             repo.send(:contains_setup_script?).should be_true
           end
@@ -317,22 +317,25 @@ describe Repo, vcr: github_cassette, clean_db: true do
 
       context 'is not ruby' do
         it 'should be false' do
-          pending
+          repo.send(:contains_gemfile?).should be_false
         end
       end
 
       context 'is ruby' do
+        let(:language) { 'Ruby' }
         context 'has a Gemfile' do
+          let(:file_name) { 'Gemfile' }
           it 'should be true' do
-            pending
+            repo.send(:contains_gemfile?).should be_true
           end
         end
 
         context 'does not have a Gemfile' do
           it 'should be false' do
-            pending
+            repo.send(:contains_gemfile?).should be_false
           end
         end
+
       end
 
     end
@@ -341,28 +344,34 @@ describe Repo, vcr: github_cassette, clean_db: true do
 
       context 'is not javascript' do
         it 'should be false' do
-          pending
+          repo.send(:contains_node_modules?).should be_false
         end
       end
 
       context 'is javascript' do
-        context 'has a present node_modules directory' do
+        let(:language) { 'Javascript' }
+        context 'has node modules' do
+          let(:file_name) { '/something' }
           it 'should be true' do
-            pending
+            repo.send(:contains_node_modules?).should be_true
           end
         end
 
-        context 'has a empty node_modules directory' do
+        context 'does not have node modules' do
           it 'should be false' do
-            pending
+            allow(repo).to receive(:contents) { [] }
+            repo.send(:contains_node_modules?).should be_false
           end
         end
 
-        context 'does not have a node_modules directory' do
+        context 'it cannot find the file' do
           it 'should be false' do
-            pending
+            stub_const 'Github::Error::NotFound', Class.new(StandardError)
+            allow(repo).to receive(:contents) { raise Github::Error::NotFound }
+            repo.send(:contains_node_modules?).should be_false
           end
         end
+
       end
 
     end
