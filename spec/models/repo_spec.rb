@@ -47,7 +47,7 @@ describe Repo, vcr: github_cassette, clean_db: true do
   describe '.find_or_fetch' do
     before(:each) { allow(Repo).to receive(:fetch) { FactoryGirl.create :repo } }
     context 'given a repo is in the database' do
-      let(:existing_repo) { FactoryGirl.create(:repo, user: user, name: SecureRandom.hex) }
+      let(:existing_repo) { FactoryGirl.create(:repo, user: user, name: 'existing_repo') }
       it 'should return a User object' do
         Repo.find_or_fetch(user: user, name: existing_repo.name).should be_a Repo
       end
@@ -60,12 +60,12 @@ describe Repo, vcr: github_cassette, clean_db: true do
 
     context 'given a repo is not in the database' do
       it 'should return a User object' do
-        Repo.find_or_fetch(user: SecureRandom.hex, name: SecureRandom.hex).should be_a Repo
+        Repo.find_or_fetch(user: 'all-the-badges-app', name: 'all_the_badges').should be_a Repo
       end
 
       it 'should call .fetch' do
         Repo.should_receive(:fetch)
-        Repo.find_or_fetch(user: SecureRandom.hex, name: SecureRandom.hex).should be_a Repo
+        Repo.find_or_fetch(user: 'all-the-badges-app', name: 'all_the_badges').should be_a Repo
       end
     end
   end
