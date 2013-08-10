@@ -65,9 +65,23 @@ describe Provider, vcr: github_cassette do
   describe '.from_slug' do
     context 'the constant exists' do
       context 'the provider is valid' do
-        it 'should return a provider' do
-
+        before(:each){ stub_const 'FooProvider', Class.new(Provider) }
+        it 'should not raise an error' do
+          expect { Provider.from_slug('foo_provider') }.to_not raise_error
         end
+
+        it 'should return the provider class' do
+          Provider.from_slug('foo_provider').should eq FooProvider
+        end
+      end
+    end
+
+    context 'the constant is not a descendant of Provider' do
+      it 'should raise an error' do
+        expect {
+          Provider.from_slug 'string'
+        }.to raise_error Provider::InvalidProvider,
+                         'String is not a valid Provider'
       end
     end
 

@@ -47,8 +47,9 @@ class Provider
     end
 
     def from_slug(slug)
-      const = slug.camelize.constantize
-      const.in? descendants ? const : (raise InvalidProvider, "#{const} is not a valid #{name}")
+      slug.camelize.constantize.tap do |const|
+        raise InvalidProvider, "#{const} is not a valid #{name}" unless descendants.include? const
+      end
     rescue NameError
       raise InvalidProvider, "Could not locate a matching constant for #{slug}"
     end
