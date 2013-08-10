@@ -105,14 +105,38 @@ describe Provider, vcr: github_cassette do
   end
 
   describe '.for_repo' do
+    let(:list_double) do
+      provider_mock = stub_const('FooProvider', Class.new(Provider))
+      [provider_mock]
+    end
+    before(:each){ allow(Provider).to receive(:list).and_return(list_double) }
     it 'should map over list' do
-      list_double = double
-      expect(list_double).to receive(:map){ [provider] }
+      expect(list_double).to receive(:map).and_call_original
       expect(Provider).to receive(:list).and_return(list_double)
       Provider.for_repo repo
     end
 
-    it 'should '
+    it 'should select #valid? on each provider' do
+      mapped_double = [provider]
+      allow(Provider.list).to receive(:map).and_return mapped_double
+      expect(mapped_double).to receive(:select).and_call_original
+      mapped_double.each do |p|
+        expect(p).to receive(:valid?)
+      end
+      Provider.for_repo repo
+    end
+
+    it 'should sort by #order on each provider' do
+      mapped_double = [provider]
+      allow(Provider.list).to receive(:map).and_return mapped_double
+      allow(mapped_double).to receive(:select).and_return mapped_double
+      expect(mapped_double).to receive(:sort_by).and_call_original
+      mapped_double.each do |p|
+        expect(p).to receive(:order)
+      end
+      Provider.for_repo repo
+    end
+
   end
 
   describe '.list' do
