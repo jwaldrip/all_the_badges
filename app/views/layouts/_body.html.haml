@@ -1,11 +1,13 @@
 .antialiased.off-canvas.hide-extras.content-body
   %nav.top-bar.fixed.contain-to-grid
     %ul.title-area
-      %li.name
+      %li.name.left
         %h1
           = link_to 'All the Badges', root_path
+      %li.badges.left
+        = render 'repos/repo', repo: application_repo
     .top-bar-section
-      %ul.left
+      %ul.right
         %li= link_to 'Find My Badges', root_path
         // %li= link_to 'About', '#'
   .row

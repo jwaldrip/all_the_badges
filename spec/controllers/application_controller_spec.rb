@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ApplicationController do
+describe ApplicationController, vcr: github_cassette do
 
   describe '.rescue_from' do
     let(:error) { StandardError }
@@ -22,6 +22,18 @@ describe ApplicationController do
         response.should redirect_to :root
         flash.notice.should eq 'Invalid User or Repo'
       end
+    end
+  end
+
+  describe '#application_repo' do
+    it 'should be a repo' do
+      controller.send(:application_repo).should be_a Repo
+    end
+  end
+
+  describe '#application_user' do
+    it 'should be a user' do
+      controller.send(:application_user).should be_a User
     end
   end
 
