@@ -1,7 +1,7 @@
 language: ruby
 before_script:
-  rake db:create
-  rake db:schema:load
+  - rake db:create
+  - rake db:schema:load
 rvm:
   - 2.0.0
 env:
