@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
   has_many :local_repos, class_name: 'Repo', foreign_key: :user_id
   has_many :repos, ->(user) { update_from_github(user) }
 
+  def github_url
+    "http://github.com/#{login}"
+  end
+
   def github_repos
     @github_repos ||= Rails.cache.fetch cache_key, expires_in: 60.minutes do
       Github.repos.list(user: login, per_page: 1000).to_a
