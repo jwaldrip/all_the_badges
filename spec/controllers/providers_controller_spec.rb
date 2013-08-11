@@ -14,6 +14,17 @@ describe ProvidersController, vcr: github_cassette do
       get :show, provider: 'sample_provider', user: user.login, repo: repo.name
       assigns(:provider).should be_a Provider
     end
+
+    it 'should call redirect_to_provider' do
+
+    end
+
+    context 'given a format of png' do
+      it 'should call #render_image' do
+        expect(controller).to receive(:render_image).and_call_original
+        get :show, provider: 'sample_provider', user: user.login, repo: repo.name, format: :png
+      end
+    end
   end
 
   describe '#user' do
@@ -45,6 +56,15 @@ describe ProvidersController, vcr: github_cassette do
       it 'should be nil' do
         controller.send(:branch_from_referer).should be_nil
       end
+    end
+  end
+
+  describe '#provider' do
+    it 'should call .from_slug on Provider with the provider slug' do
+      params = { provider: 'sample_provider' }
+      controller.params = params
+      expect(Provider).to receive(:from_slug).with params[:provider]
+      controller.send :provider
     end
   end
 
