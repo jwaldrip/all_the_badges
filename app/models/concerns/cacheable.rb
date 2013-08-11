@@ -18,9 +18,10 @@ module Cacheable
     end
 
     def cache_method(method, options={})
-      define_method("#{method}_with_cache") do |*args, &block|
+      cached_target, punctuation = method.to_s.sub(/([?!=])$/, ''), $1
+      define_method("#{cached_target}_with_cache#{punctuation}") do |*args, &block|
         Rails.cache.fetch cache_key("#{method}", *args), options do
-          send "#{method}_without_cache", *args, &block
+          send "#{cached_target}_without_cache#{punctuation}", *args, &block
         end
       end
       alias_method_chain method, :cache
