@@ -9,7 +9,7 @@ class Provider
   delegate :name, to: :repo, prefix: true
   delegate :login, to: :user, prefix: true
 
-  validates_presence_of :image_url, :link_url
+  validates_presence_of :raw_image_url, :raw_link_url
 
   InvalidProvider = Class.new(StandardError)
 
@@ -114,8 +114,14 @@ class Provider
   private
 
   def created?
-    Rails.cache.fetch cache_key, expires_in: 60.minutes do
-      Faraday.get(raw_image_url).status == 200
+    http.get(raw_image_url).status == 200
+  end
+  cache_method :created?, expires_in: 60.minutes
+
+  def http
+    Faraday.new do |conn|
+      conn.response :follow_redirects
+      conn.adapter Faraday.default_adapter
     end
   end
 
