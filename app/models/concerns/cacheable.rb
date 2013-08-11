@@ -29,7 +29,7 @@ module Cacheable
   end
 
   def cache_key(*args)
-    values = self.class._cache_keys.map do |key|
+    values = self._cache_keys.map do |key|
       send(key) || '*'
     end
     ([self.class.name] + values + args).select(&:present?).join('/')
