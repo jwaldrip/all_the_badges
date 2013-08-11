@@ -22,7 +22,11 @@ class ProvidersController < ApplicationController
   end
 
   def repo
-    @repo ||= Repo.find params[:user], params[:repo], branch: branch_from_referer
+    @repo ||= Repo.find_or_fetch user: user, name: params[:repo], branch: branch_from_referer
+  end
+
+  def user
+    @user ||= User.find_or_fetch(login: params[:user])
   end
 
   def branch_from_referer
@@ -32,7 +36,9 @@ class ProvidersController < ApplicationController
   end
 
   def provider
-    params[:provider].camelize.constantize
+    Provider.from_slug params[:provider]
   end
+
+  helper_method :user, :repo
 
 end

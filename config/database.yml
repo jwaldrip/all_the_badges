@@ -17,9 +17,10 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: siac_development
+  database: all_the_badges_development
   pool: 5
-  username: siac
+  host: localhost
+  username: all_the_badges
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -46,15 +47,26 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: siac_test
+  database: all_the_badges_test
   pool: 5
-  username: siac
+  host: localhost
+  username: all_the_badges
   password:
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: siac_production
+  database: all_the_badges_production
+  host: localhost
   pool: 5
-  username: siac
+  username: all_the_badges
+  password:
+
+ci:
+  adapter: postgresql
+  encoding: unicode
+  database: all_the_badges_ci
+  host: localhost
+  pool: 5
+  username: postgres
   password:
