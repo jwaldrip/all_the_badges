@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+  - 2.0.0
+before_script:
+  - cp config/database.ci.yml config/database.yml
+  - rake db:create
+  - rake db:schema:load
+  - rake db:test:prepare
+script:
+  bundle exec rspec
