@@ -50,6 +50,6 @@ group :development, :test do
   gem "rb-fsevent", require: false
   gem "rspec-rails", "~> 2.14"
   gem "simplecov"
-  # gem "coveralls"
+  gem "coveralls", require: false
   gem "terminal-notifier-guard"
 end
