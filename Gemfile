@@ -4,17 +4,20 @@ ruby '2.0.0'
 
 # Core Frameworks
 gem 'rails', '4.0.0'
-gem "thin"
+gem 'puma'
 gem 'pg'
-# gem 'turbolinks'
-gem "oj"
+gem 'turbolinks'
 
 # Cache
 gem 'dalli'
 
 # Data
 gem 'github_api'
+gem 'faraday'
+gem 'faraday_middleware'
 gem 'typhoeus'
+gem 'em-synchrony'
+gem 'em-http-request'
 
 # Assets & Views
 gem 'haml-rails'
