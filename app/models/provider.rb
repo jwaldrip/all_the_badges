@@ -121,7 +121,7 @@ class Provider
   def http
     Faraday.new do |conn|
       conn.response :follow_redirects
-      conn.adapter Faraday.default_adapter
+      conn.adapter :net_http
     end
   end
 
