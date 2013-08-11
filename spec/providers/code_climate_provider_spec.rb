@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CodeClimate, vcr: github_cassette do
+describe CodeClimateProvider, vcr: github_cassette do
   include_context 'provider stub'
 
   describe 'validations' do

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BadgeFury, vcr: github_cassette do
+describe BadgeFuryProvider, vcr: github_cassette do
   include_context 'provider stub'
 
   describe '#package_name' do

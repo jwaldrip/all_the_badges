@@ -1,4 +1,4 @@
-class Coveralls < Provider
+class CoverallsProvider < Provider
 
   order 4
   link_url 'https://coveralls.io/r/:user/:repo_name?branch=:branch'

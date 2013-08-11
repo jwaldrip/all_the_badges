@@ -76,21 +76,22 @@ describe Provider, vcr: github_cassette do
       context 'the provider is valid' do
         before(:each){ stub_const 'FooProvider', Class.new(Provider) }
         it 'should not raise an error' do
-          expect { Provider.from_slug('foo_provider') }.to_not raise_error
+          expect { Provider.from_slug('foo') }.to_not raise_error
         end
 
         it 'should return the provider class' do
-          Provider.from_slug('foo_provider').should eq FooProvider
+          Provider.from_slug('foo').should eq FooProvider
         end
       end
     end
 
     context 'the constant is not a descendant of Provider' do
+      before(:each){ stub_const 'InvalidProvider', Class.new }
       it 'should raise an error' do
         expect {
-          Provider.from_slug 'string'
+          Provider.from_slug 'invalid'
         }.to raise_error Provider::InvalidProvider,
-                         'String is not a valid Provider'
+                         'InvalidProvider is not a valid Provider'
       end
     end
 
@@ -194,7 +195,7 @@ describe Provider, vcr: github_cassette do
   describe '#slug' do
     it 'should be the class constant underscored' do
       stub_const 'SampleProvider', Class.new(Provider)
-      SampleProvider.new.slug.should eq 'sample_provider'
+      SampleProvider.new.slug.should eq 'sample'
     end
   end
 

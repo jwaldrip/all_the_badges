@@ -1,4 +1,4 @@
-class BadgeFury < Provider
+class BadgeFuryProvider < Provider
 
   validates_presence_of :project_type
 

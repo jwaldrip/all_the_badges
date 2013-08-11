@@ -1,4 +1,4 @@
-class Travis < Provider
+class TravisProvider < Provider
 
   order 3
   link_url 'https://travis-ci.org/:user_login/:repo_name'

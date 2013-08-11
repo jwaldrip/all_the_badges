@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Gemnasium, vcr: github_cassette do
+describe GemnasiumProvider, vcr: github_cassette do
   include_context 'provider stub'
 
   describe 'validations' do

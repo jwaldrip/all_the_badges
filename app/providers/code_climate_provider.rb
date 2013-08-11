@@ -1,6 +1,6 @@
 require 'net/http'
 
-class CodeClimate < Provider
+class CodeClimateProvider < Provider
 
   validates_presence_of :ruby?
 

@@ -49,7 +49,7 @@ group :development, :test do
   gem "rb-inotify", require: false
   gem "rb-fsevent", require: false
   gem "rspec-rails", "~> 2.14"
-  gem "simplecov"
+  gem "simplecov", require: false
   gem "coveralls", require: false
   gem "terminal-notifier-guard"
 end

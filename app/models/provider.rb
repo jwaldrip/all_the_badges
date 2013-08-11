@@ -47,7 +47,7 @@ class Provider
     end
 
     def from_slug(slug)
-      slug.camelize.constantize.tap do |const|
+      (slug.camelize + 'Provider').constantize.tap do |const|
         raise InvalidProvider, "#{const} is not a valid #{name}" unless descendants.include? const
       end
     rescue NameError
@@ -100,7 +100,7 @@ class Provider
   order 99
 
   def slug
-    self.class.name.underscore
+    self.class.name.underscore.chomp '_provider'
   end
 
   def image_url

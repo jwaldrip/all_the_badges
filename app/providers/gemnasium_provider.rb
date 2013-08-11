@@ -1,4 +1,4 @@
-class Gemnasium < Provider
+class GemnasiumProvider < Provider
 
   validates_presence_of :package_supported?, :language_supported?
 
