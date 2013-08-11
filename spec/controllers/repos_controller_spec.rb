@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ReposController, vcr: github_cassette do
+describe ReposController, vcr: github_cassette, clean_db: true do
 
   describe 'GET#show' do
     let(:repo){ FactoryGirl.create :repo }
