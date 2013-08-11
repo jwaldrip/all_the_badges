@@ -16,8 +16,10 @@ class Repo < ActiveRecord::Base
       all
     end
 
-    def find_or_fetch(user: nil, name: nil)
-      find_by(user_id: user.try(:id), name: name) || fetch(user: user, name: name)
+    def find_or_fetch(user: nil, name: nil, branch: nil)
+      (find_by(user_id: user.try(:id), name: name) || fetch(user: user, name: name)).tap do |instance|
+        instance.branch = branch
+      end
     end
 
     private

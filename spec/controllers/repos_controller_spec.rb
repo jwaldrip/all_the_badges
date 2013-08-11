@@ -12,6 +12,7 @@ describe ReposController, vcr: github_cassette do
 
     it 'should assign @repo a repo' do
       get :show, params
+      assigns(:repo).should be_a Repo
       assigns(:repo).user_login.should eq params[:user]
       assigns(:repo).name.should eq params[:repo]
     end

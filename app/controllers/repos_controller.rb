@@ -7,7 +7,9 @@ class ReposController < ApplicationController
   private
 
   def user
-    User.find_or_fetch(login: params[:user])
+    @user ||= User.find_or_fetch(login: params[:user])
   end
+
+  helper_method :user
 
 end
