@@ -5,7 +5,7 @@ class Content
   class << self
     include Cacheable
     cache_keys :name
-    
+
     def find(repo, path)
       response = Github.repos.contents.find(repo.user_login.to_s, repo.name.to_s, path, ref: repo.branch.to_s).body
       case response
@@ -47,8 +47,8 @@ class Content
   end
 
   def replace(other_object)
-    vars = [other_object, self].map(&:instance_variables).flatten
-    vars.each do |var|
+    self.instance_variables.each { |var| remove_instance_variable var}
+    other_object.instance_variables.each do |var|
       new_value = other_object.instance_variable_get var
       self.instance_variable_set var, new_value
     end

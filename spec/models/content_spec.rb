@@ -5,7 +5,7 @@ describe Content, vcr: github_cassette do
   let(:user){ FactoryGirl.build :user, login: 'rails' }
   let(:repo){ FactoryGirl.build :repo, user: user, name: 'rails' }
   let(:data){ Base64.encode64('something') }
-  let(:content){ Content.new repo: repo, content: data }
+  let(:content){ Content.new repo: repo, content: data, path: '/path' }
 
   describe '.find' do
     let(:response){ nil }
@@ -86,11 +86,26 @@ describe Content, vcr: github_cassette do
   end
 
   describe '#reload' do
-    pending
+    it 'should call replace with a new instance from find' do
+      new_instance_double = double(:new_instance)
+      expect(Content).to receive(:find).with(content.repo, content.path){ new_instance_double }
+      expect(content).to receive(:replace).with new_instance_double
+      content.reload
+    end
   end
 
   describe '#replace' do
-    pending
+    let(:new_content){ Content.new repo: repo.dup, content: Base64.encode64('something else'), path: '/new_path' }
+    it 'should replace its instance variables' do
+      allow(content).to receive(:get_values){
+        content.instance_variables.reduce({}) do |hash, var|
+          hash.merge var => content.instance_variable_get(var)
+        end
+      }
+      original_values = content.get_values
+      expect { content.replace new_content }.to change { content.get_values }
+      content.get_values.should_not include original_values
+    end
   end
 
 end
