@@ -7,11 +7,11 @@
 .section-container.auto{ data: { section: true } }
   %section
     %p.title{ data: { section: { title: true } } }= link_to 'Sources', '#sources'
-    .content{ data: { section: { content: true } } }
+    #sources.content{ data: { section: { content: true } } }
       %table
         = render @user.repos.reject(&:fork)
   %section
     %p.title{ data: { section: { title: true } } }= link_to 'Forks', '#forks'
-    .content{ data: { section: { content: true } } }
+    #forks.content{ data: { section: { content: true } } }
       %table
         = render @user.repos.select(&:fork)

@@ -2,6 +2,7 @@ class BadgeFuryProvider < Provider
 
   validates_presence_of :project_type
 
+  alt 'Version'
   order 1
   link_url "https://badge.fury.io/:project_type/:package_name"
   image_url "https://badge.fury.io/:project_type/:package_name.png"

@@ -15,37 +15,6 @@ class Provider
 
   class << self
 
-    def image_url(url)
-      convert_symbols! url
-      class_eval <<-RUBY, __FILE__, __LINE__ + 1
-        def raw_image_url
-          "#{url}"
-        end
-      RUBY
-    end
-
-    def link_url(url)
-      convert_symbols! url
-      class_eval <<-RUBY, __FILE__, __LINE__ + 1
-        def raw_link_url
-          "#{url}"
-        end
-      RUBY
-    end
-
-    def creatable!(link_url: nil, image_url: nil)
-      [link_url, image_url].each { |arg| convert_symbols! arg }
-      class_eval <<-RUBY, __FILE__, __LINE__ + 1
-        def create_link_url
-          "#{link_url}"
-        end
-
-        def create_image_url
-          "#{image_url}"
-        end
-      RUBY
-    end
-
     def from_slug(slug)
       (slug.camelize + 'Provider').constantize.tap do |const|
         raise InvalidProvider, "#{const} is not a valid #{name}" unless descendants.include? const
@@ -67,10 +36,51 @@ class Provider
       end.select { |provider| provider.in? descendants }
     end
 
+    private
+
+    def image_url(url)
+      SymbolConverter.replace! url
+      class_eval <<-RUBY, __FILE__, __LINE__ + 1
+        def raw_image_url
+          "#{url}"
+        end
+      RUBY
+    end
+
+    def link_url(url)
+      SymbolConverter.replace! url
+      class_eval <<-RUBY, __FILE__, __LINE__ + 1
+        def raw_link_url
+          "#{url}"
+        end
+      RUBY
+    end
+
+    def creatable!(link_url: nil, image_url: nil)
+      [link_url, image_url].each { |arg| SymbolConverter.replace! arg }
+      class_eval <<-RUBY, __FILE__, __LINE__ + 1
+        def create_link_url
+          "#{link_url}"
+        end
+
+        def create_image_url
+          "#{image_url}"
+        end
+      RUBY
+    end
+
     def display_name(name = nil)
       class_eval <<-RUBY, __FILE__, __LINE__ + 1
         def display_name
           '#{name}'.present? ? '#{name}' : self.class.name.titleize
+        end
+      RUBY
+    end
+
+    def alt(string = nil)
+      class_eval <<-RUBY, __FILE__, __LINE__ + 1
+        def alt
+          '#{string}'
         end
       RUBY
     end
@@ -83,17 +93,10 @@ class Provider
       RUBY
     end
 
-    private
-
-    def convert_symbols!(string)
-      string.gsub!(/:(?<m>[_a-z]+[_a-zA-Z1-9]*)/) { ['#{', $~[:m], '}'].join }
-    rescue
-      string
-    end
-
   end
 
   display_name nil
+  alt nil
   image_url nil
   link_url nil
   creatable!

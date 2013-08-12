@@ -1,5 +1,6 @@
 class CoverallsProvider < Provider
 
+  alt 'Coverage'
   order 4
   link_url 'https://coveralls.io/r/:user_login/:repo_name?branch=:branch'
   image_url 'https://coveralls.io/repos/:user_login/:repo_name/badge.png?branch=:branch'

@@ -7,11 +7,11 @@ describe Provider, vcr: github_cassette do
 
   # Resets the class
   before(:each) do
-    Provider.display_name nil
-    Provider.image_url nil
-    Provider.link_url nil
-    Provider.creatable!
-    Provider.order 99
+    Provider.send :display_name, nil
+    Provider.send :image_url, nil
+    Provider.send :link_url, nil
+    Provider.send :creatable!
+    Provider.send :order, 99
   end
 
   it { should delegate(:branch).to(:repo) }
@@ -28,17 +28,17 @@ describe Provider, vcr: github_cassette do
 
   describe '.image_url' do
     it 'should call convert_symbols' do
-      expect(Provider).to receive(:convert_symbols!).with(':value')
-      Provider.image_url ':value'
+      expect(SymbolConverter).to receive(:replace!).with(':value')
+      Provider.send :image_url, ':value'
     end
 
     it 'should define an image_url instance method' do
       expect(Provider).to receive(:method_added).with(:raw_image_url)
-      Provider.image_url ':value'
+      Provider.send :image_url, ':value'
     end
 
     it 'should define a method that returns the proper result' do
-      Provider.image_url 'example/:value'
+      Provider.send :image_url, 'example/:value'
       allow(provider).to receive(:value) { 'foo' }
       allow(provider).to receive(:created?) { true }
       provider.image_url.should eq 'example/foo'
@@ -47,27 +47,27 @@ describe Provider, vcr: github_cassette do
 
   describe '.link_url' do
     it 'should call convert_symbols' do
-      expect(Provider).to receive(:convert_symbols!).with(':value')
-      Provider.link_url ':value'
+      expect(SymbolConverter).to receive(:replace!).with(':value')
+      Provider.send :link_url, ':value'
     end
 
     it 'should define an image_url instance method' do
       expect(Provider).to receive(:method_added).with(:raw_link_url)
-      Provider.link_url ':value'
+      Provider.send :link_url, ':value'
     end
   end
 
   describe '.creatable!' do
     it 'should call convert_symbols with the values for link_url and image_url' do
-      expect(Provider).to receive(:convert_symbols!).with(':foo_value')
-      expect(Provider).to receive(:convert_symbols!).with(':bar_value')
-      Provider.creatable! link_url: ':foo_value', image_url: ':bar_value'
+      expect(SymbolConverter).to receive(:replace!).with(':foo_value')
+      expect(SymbolConverter).to receive(:replace!).with(':bar_value')
+      Provider.send :creatable!, link_url: ':foo_value', image_url: ':bar_value'
     end
 
     it 'should define the proper methods' do
       expect(Provider).to receive(:method_added).with(:create_link_url)
       expect(Provider).to receive(:method_added).with(:create_image_url)
-      Provider.creatable! link_url: ':foo_value', image_url: ':bar_value'
+      Provider.send :creatable!, link_url: ':foo_value', image_url: ':bar_value'
     end
   end
 
@@ -171,14 +171,14 @@ describe Provider, vcr: github_cassette do
   describe '.display_name' do
     it 'should set the method #display_name' do
       expect(Provider).to receive(:method_added).with(:display_name)
-      Provider.display_name nil
+      Provider.send :display_name, nil
     end
   end
 
   describe '#display_name' do
     context 'when nil or not set' do
       it 'should be the titleized name of the class' do
-        Provider.display_name nil
+        Provider.send :display_name, nil
         allow(Provider).to receive(:name) { 'FooBarBaz' }
         provider.display_name.should eq 'Foo Bar Baz'
       end
@@ -186,7 +186,7 @@ describe Provider, vcr: github_cassette do
 
     context 'when set' do
       it 'should be the proper display name' do
-        Provider.display_name 'Something'
+        Provider.send :display_name, 'Something'
         provider.display_name.should eq 'Something'
       end
     end
@@ -200,7 +200,7 @@ describe Provider, vcr: github_cassette do
   end
 
   describe '#image_url' do
-    before(:each) { Provider.image_url 'example/:value' }
+    before(:each) { Provider.send :image_url, 'example/:value' }
     context 'when the provider exists' do
       it 'should return the link_url' do
         allow(provider).to receive(:value) { 'foo' }
@@ -220,7 +220,7 @@ describe Provider, vcr: github_cassette do
   end
 
   describe '#link_url' do
-    before(:each) { Provider.link_url 'example/:value' }
+    before(:each) { Provider.send :link_url,  'example/:value' }
     context 'when the provider exists' do
       it 'should return the link_url' do
         allow(provider).to receive(:value) { 'bar' }
@@ -241,7 +241,7 @@ describe Provider, vcr: github_cassette do
 
   describe '#create_image_url' do
     before(:each) do
-      Provider.creatable! link_url: 'create/:foo_value', image_url: 'create/:bar_value'
+      Provider.send :creatable!, link_url: 'create/:foo_value', image_url: 'create/:bar_value'
       allow(provider).to receive(:foo_value) { 'foo' }
       allow(provider).to receive(:bar_value) { 'bar' }
     end
@@ -252,7 +252,7 @@ describe Provider, vcr: github_cassette do
 
   describe '#create_link_url' do
     before(:each) do
-      Provider.creatable! link_url: 'create/:foo_value', image_url: 'create/:bar_value'
+      Provider.send :creatable!, link_url: 'create/:foo_value', image_url: 'create/:bar_value'
       allow(provider).to receive(:foo_value) { 'foo' }
       allow(provider).to receive(:bar_value) { 'bar' }
     end

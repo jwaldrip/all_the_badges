@@ -2,6 +2,7 @@ class GemnasiumProvider < Provider
 
   validates_presence_of :package_supported?, :language_supported?
 
+  alt 'Dependencies'
   order 2
   link_url "https://gemnasium.com/:user_login/:repo_name"
   image_url "https://gemnasium.com/:user_login/:repo_name.png"

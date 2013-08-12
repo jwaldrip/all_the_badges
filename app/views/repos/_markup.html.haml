@@ -1,0 +1,9 @@
+.section-container.auto{ data: { section: true } }
+  - Markup.for_repo(@repo, host: root_url).each do |markup, output|
+    %section
+      %p.title{ data: { section: { title: true } } }= link_to markup, markup.parameterize('_')
+      .content{ id: markup.parameterize('_'), data: { section: { content: true } } }
+        .well
+          %pre.code
+            = preserve do
+              #{output}

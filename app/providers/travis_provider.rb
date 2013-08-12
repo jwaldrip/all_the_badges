@@ -1,5 +1,6 @@
 class TravisProvider < Provider
 
+  alt 'Build Status'
   order 3
   link_url 'https://travis-ci.org/:user_login/:repo_name'
   image_url 'https://travis-ci.org/:user_login/:repo_name.png?branch=:branch'

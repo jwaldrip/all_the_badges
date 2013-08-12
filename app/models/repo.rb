@@ -52,8 +52,12 @@ class Repo < ActiveRecord::Base
     @providers ||= Provider.for_repo self
   end
 
+  def language
+    Language.new read_attribute :language
+  end
+
   def language_is?(lang)
-    language.to_s.downcase.parameterize('_') == lang.to_s.downcase.parameterize('_')
+    language == lang
   end
 
   private

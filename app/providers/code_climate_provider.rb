@@ -4,6 +4,7 @@ class CodeClimateProvider < Provider
 
   validates_presence_of :ruby?
 
+  alt 'Code Climate'
   order 5
   link_url "https://codeclimate.com/github/:user_login/:repo_name"
   image_url "https://codeclimate.com/github/:user_login/:repo_name.png"
