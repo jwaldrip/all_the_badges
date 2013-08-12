@@ -30,6 +30,8 @@ class Repo < ActiveRecord::Base
 
   end
 
+  default_scope { order(name: :asc) }
+
   belongs_to :user
   attr_writer :branch
   delegate :login, to: :user, prefix: true, allow_nil: true
