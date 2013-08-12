@@ -17,6 +17,6 @@ class ApplicationController < ActionController::Base
     @application_user ||= User.find_or_fetch login: 'jwaldrip'
   end
 
-  helper_method :application_repo
+  helper_method :application_repo, :application_user
 
 end
