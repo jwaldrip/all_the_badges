@@ -4108,4 +4108,64 @@ http_interactions:
       string: ' '
     http_version: 
   recorded_at: Sun, 11 Aug 2013 05:07:17 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743&ref=master
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Mon, 12 Aug 2013 05:23:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 200 OK
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4974'
+      X-RateLimit-Reset:
+      - '1376286669'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Last-Modified:
+      - Fri, 19 Jul 2013 16:51:20 GMT
+      ETag:
+      - '"f53b2902b4040d4882ffe7e4cca8275b"'
+      Vary:
+      - Accept, Authorization, Cookie, Accept-Encoding
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '7117'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      Access-Control-Allow-Origin:
+      - '*'
+    body:
+      encoding: UTF-8
+      string: '[{"name":".gitignore","path":".gitignore","sha":"214324cc27fcab41c2b7a9c203794a94b85c1913","size":67,"url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/.gitignore?ref=master","html_url":"https://github.com/jwaldrip/Telephony-Dev-Box/blob/master/.gitignore","git_url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/blobs/214324cc27fcab41c2b7a9c203794a94b85c1913","type":"file","_links":{"self":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/.gitignore?ref=master","git":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/blobs/214324cc27fcab41c2b7a9c203794a94b85c1913","html":"https://github.com/jwaldrip/Telephony-Dev-Box/blob/master/.gitignore"}},{"name":"Cheffile","path":"Cheffile","sha":"d04aa41e90e8e7960bf85ac326dd1cf76eabdb73","size":921,"url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/Cheffile?ref=master","html_url":"https://github.com/jwaldrip/Telephony-Dev-Box/blob/master/Cheffile","git_url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/blobs/d04aa41e90e8e7960bf85ac326dd1cf76eabdb73","type":"file","_links":{"self":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/Cheffile?ref=master","git":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/blobs/d04aa41e90e8e7960bf85ac326dd1cf76eabdb73","html":"https://github.com/jwaldrip/Telephony-Dev-Box/blob/master/Cheffile"}},{"name":"Cheffile.lock","path":"Cheffile.lock","sha":"a71d6ece5601299f44df553f9e22bdff00828dec","size":2080,"url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/Cheffile.lock?ref=master","html_url":"https://github.com/jwaldrip/Telephony-Dev-Box/blob/master/Cheffile.lock","git_url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/blobs/a71d6ece5601299f44df553f9e22bdff00828dec","type":"file","_links":{"self":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/Cheffile.lock?ref=master","git":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/blobs/a71d6ece5601299f44df553f9e22bdff00828dec","html":"https://github.com/jwaldrip/Telephony-Dev-Box/blob/master/Cheffile.lock"}},{"name":"README.markdown","path":"README.markdown","sha":"2b885cdd17ba941c6b9714ace328f0863bd06ad4","size":2931,"url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/README.markdown?ref=master","html_url":"https://github.com/jwaldrip/Telephony-Dev-Box/blob/master/README.markdown","git_url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/blobs/2b885cdd17ba941c6b9714ace328f0863bd06ad4","type":"file","_links":{"self":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/README.markdown?ref=master","git":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/blobs/2b885cdd17ba941c6b9714ace328f0863bd06ad4","html":"https://github.com/jwaldrip/Telephony-Dev-Box/blob/master/README.markdown"}},{"name":"Rakefile","path":"Rakefile","sha":"a6413645e676f95ae3f399d2e77f9ce5ee6379c9","size":159,"url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/Rakefile?ref=master","html_url":"https://github.com/jwaldrip/Telephony-Dev-Box/blob/master/Rakefile","git_url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/blobs/a6413645e676f95ae3f399d2e77f9ce5ee6379c9","type":"file","_links":{"self":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/Rakefile?ref=master","git":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/blobs/a6413645e676f95ae3f399d2e77f9ce5ee6379c9","html":"https://github.com/jwaldrip/Telephony-Dev-Box/blob/master/Rakefile"}},{"name":"Vagrantfile","path":"Vagrantfile","sha":"c4b155738b8544965019a7148fa6bcb71299d6e2","size":7048,"url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/Vagrantfile?ref=master","html_url":"https://github.com/jwaldrip/Telephony-Dev-Box/blob/master/Vagrantfile","git_url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/blobs/c4b155738b8544965019a7148fa6bcb71299d6e2","type":"file","_links":{"self":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/Vagrantfile?ref=master","git":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/blobs/c4b155738b8544965019a7148fa6bcb71299d6e2","html":"https://github.com/jwaldrip/Telephony-Dev-Box/blob/master/Vagrantfile"}},{"name":"data_bags","path":"data_bags","sha":"7e707a071a3c771d76e65cf182b1071c66cc6697","size":null,"url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/data_bags?ref=master","html_url":"https://github.com/jwaldrip/Telephony-Dev-Box/tree/master/data_bags","git_url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/trees/7e707a071a3c771d76e65cf182b1071c66cc6697","type":"dir","_links":{"self":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/data_bags?ref=master","git":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/trees/7e707a071a3c771d76e65cf182b1071c66cc6697","html":"https://github.com/jwaldrip/Telephony-Dev-Box/tree/master/data_bags"}},{"name":"mojolingo-misc","path":"mojolingo-misc","sha":"29f776b7b28936aa428c5bd76ae4a9babe32f76d","size":null,"url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/mojolingo-misc?ref=master","html_url":"https://github.com/jwaldrip/Telephony-Dev-Box/tree/master/mojolingo-misc","git_url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/trees/29f776b7b28936aa428c5bd76ae4a9babe32f76d","type":"dir","_links":{"self":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/mojolingo-misc?ref=master","git":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/trees/29f776b7b28936aa428c5bd76ae4a9babe32f76d","html":"https://github.com/jwaldrip/Telephony-Dev-Box/tree/master/mojolingo-misc"}},{"name":"sipp","path":"sipp","sha":"aa3f3aac1f5fd771caa96fdfe3bf392d31d84f92","size":null,"url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/sipp?ref=master","html_url":"https://github.com/jwaldrip/Telephony-Dev-Box/tree/master/sipp","git_url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/trees/aa3f3aac1f5fd771caa96fdfe3bf392d31d84f92","type":"dir","_links":{"self":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/sipp?ref=master","git":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/trees/aa3f3aac1f5fd771caa96fdfe3bf392d31d84f92","html":"https://github.com/jwaldrip/Telephony-Dev-Box/tree/master/sipp"}},{"name":"wav2rtp","path":"wav2rtp","sha":"40760213b9c64e2df6e47832bef21e7e22ab47ea","size":null,"url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/wav2rtp?ref=master","html_url":"https://github.com/jwaldrip/Telephony-Dev-Box/tree/master/wav2rtp","git_url":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/trees/40760213b9c64e2df6e47832bef21e7e22ab47ea","type":"dir","_links":{"self":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/contents/wav2rtp?ref=master","git":"https://api.github.com/repos/jwaldrip/Telephony-Dev-Box/git/trees/40760213b9c64e2df6e47832bef21e7e22ab47ea","html":"https://github.com/jwaldrip/Telephony-Dev-Box/tree/master/wav2rtp"}}]'
+    http_version: 
+  recorded_at: Mon, 12 Aug 2013 05:23:14 GMT
 recorded_with: VCR 2.5.0
