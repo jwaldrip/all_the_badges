@@ -157,9 +157,8 @@ describe Repo, vcr: github_cassette, clean_db: true do
     context 'containing a .gemspec' do
       it 'should set is_package to true' do
         allow(repo).to receive(:contains_gemspec?) { true }
-        expect { repo.send(:determine_if_is_package) }.to change {
-          repo.is_package
-        }.to be_true
+        repo.send(:determine_if_is_package)
+        repo.is_package.should be_true
       end
     end
 
