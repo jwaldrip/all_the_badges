@@ -165,18 +165,16 @@ describe Repo, vcr: github_cassette, clean_db: true do
     context 'containing a package.json' do
       it 'should set is_package to true' do
         allow(repo).to receive(:contains_package_json?) { true }
-        expect { repo.send(:determine_if_is_package) }.to change {
-          repo.is_package
-        }.to be_true
+        repo.send(:determine_if_is_package)
+        repo.is_package.should be_true
       end
     end
 
     context 'containing a setup.py' do
       it 'should set is_package to true' do
         allow(repo).to receive(:contains_setup_script?) { true }
-        expect { repo.send(:determine_if_is_package) }.to change {
-          repo.is_package
-        }.to be_true
+        repo.send(:determine_if_is_package)
+        repo.is_package.should be_true
       end
     end
 
