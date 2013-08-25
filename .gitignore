@@ -16,3 +16,7 @@
 /tmp
 .env
 /coverage/
+/vendor/cache/
+/Vagrantfile
+/modules/
+/.vagrant/
