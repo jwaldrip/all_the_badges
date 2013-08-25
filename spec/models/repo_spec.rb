@@ -197,18 +197,16 @@ describe Repo, vcr: github_cassette, clean_db: true do
     context 'containing a Gemfile' do
       it 'should set contains_bundle to true' do
         allow(repo).to receive(:contains_gemfile?) { true }
-        expect { repo.send(:determine_if_contains_bundle) }.to change {
-          repo.contains_bundle
-        }.to be_true
+        repo.send(:determine_if_contains_bundle)
+        repo.contains_bundle.should be_true
       end
     end
 
     context 'containing a present node_modules directory' do
       it 'should set contains_bundle to true' do
         allow(repo).to receive(:contains_node_modules?) { true }
-        expect { repo.send(:determine_if_contains_bundle) }.to change {
-          repo.contains_bundle
-        }.to be_true
+        repo.send(:determine_if_contains_bundle)
+        repo.contains_bundle.should be_true
       end
     end
 
