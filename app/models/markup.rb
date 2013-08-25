@@ -4,7 +4,7 @@ class Markup
 
   class << self
 
-    attr_reader :_template, :_languages
+    attr_reader :_template
 
     def list
       base_dir = Rails.root.join 'app', 'markups'
@@ -35,6 +35,14 @@ class Markup
       @display_name || self.name.chomp('Markup')
     end
 
+    def _languages
+      @_languages ||= []
+    end
+
+    def _languages=(val)
+      @_languages = val
+    end
+
     private
 
     def set_display_name(name = nil)
@@ -42,7 +50,7 @@ class Markup
     end
 
     def languages(*langs)
-      @_languages = langs.map { |lang| Language.new lang }
+      self._languages += langs.map { |lang| Language.new lang }
     end
 
     def template(content)
