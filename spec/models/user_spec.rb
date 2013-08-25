@@ -35,12 +35,6 @@ describe User, vcr: github_cassette, clean_db: true do
     end
   end
 
-  describe '#github_url' do
-    it 'should return a github user url' do
-      user.github_url.should eq "https://github.com/#{user.login}"
-    end
-  end
-
   describe '.fetch' do
     context 'the user exists on github' do
       it 'should not raise an error' do
@@ -58,4 +52,17 @@ describe User, vcr: github_cassette, clean_db: true do
       end
     end
   end
+
+  describe '#github_url' do
+    it 'should return a github user url' do
+      user.github_url.should eq "https://github.com/#{user.login}"
+    end
+  end
+
+  describe '#to_param' do
+    it 'should be the users login' do
+      user.to_param.should eq user.login
+    end
+  end
+
 end
