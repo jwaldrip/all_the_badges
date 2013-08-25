@@ -1,11 +1,10 @@
 class ProvidersController < ApplicationController
-  include ActionView::Helpers::AssetUrlHelper
 
   def show
-    @provider = provider.new repo: repo
+    @provider = provider_class.new repo: repo
     respond_to do |format|
       format.png { render_image }
-      format.any { redirect_to_provider }
+      format.html { redirect_to_provider }
     end
   end
 
@@ -14,7 +13,8 @@ class ProvidersController < ApplicationController
   def render_image
     expires_in 0.seconds, public: false, must_revalidate: true
     response.cache_control.replace(max_age: 10.seconds, public: false, must_revalidate: true)
-    redirect_to image_path @provider.image_url
+    image = CachedImage.fetch(provider: @provider)
+    render text: image, content_type: 'image/png', stream: true
   end
 
   def redirect_to_provider
@@ -35,7 +35,7 @@ class ProvidersController < ApplicationController
     nil
   end
 
-  def provider
+  def provider_class
     Provider.from_slug params[:provider]
   end
 

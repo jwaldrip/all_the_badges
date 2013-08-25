@@ -2,7 +2,7 @@ class Repo < ActiveRecord::Base
   include SelectiveAttributes
   include Cacheable
 
-  cache_keys :user, :name, :branch
+  cache_keys :user_login, :name, :branch
 
   class << self
 
@@ -60,6 +60,15 @@ class Repo < ActiveRecord::Base
 
   def language_is?(lang)
     language == lang
+  end
+
+  def commits
+    Github.repos.commits.list(user_login, name).to_a
+  end
+  cache_method :commits, expires_in: 1.hour
+
+  def last_sha
+    self.commits.last.sha
   end
 
   private

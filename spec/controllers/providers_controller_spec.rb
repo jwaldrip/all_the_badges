@@ -16,7 +16,8 @@ describe ProvidersController, vcr: github_cassette do
     end
 
     it 'should call redirect_to_provider' do
-
+      expect(controller).to receive(:redirect_to_provider).and_call_original
+      get :show, provider: 'sample', user: user.login, repo: repo.name
     end
 
     context 'given a format of png' do
@@ -59,12 +60,12 @@ describe ProvidersController, vcr: github_cassette do
     end
   end
 
-  describe '#provider' do
+  describe '#provider_class' do
     it 'should call .from_slug on Provider with the provider slug' do
       params = { provider: 'sample' }
       controller.params = params
       expect(Provider).to receive(:from_slug).with params[:provider]
-      controller.send :provider
+      controller.send :provider_class
     end
   end
 

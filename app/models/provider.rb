@@ -118,11 +118,14 @@ class Provider
 
   def created?
     http.get(raw_image_url).status == 200
+  rescue URI::InvalidURIError
+    false
   end
+
   cache_method :created?, expires_in: 60.minutes
 
   def http
-    Faraday.new do |conn|
+    @http ||= Faraday.new do |conn|
       conn.response :follow_redirects
       conn.adapter :net_http
     end
