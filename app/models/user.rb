@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
   has_many :repos, ->(user) { update_from_github(user) }
 
   def github_url
-    "http://github.com/#{login}"
+    "https://github.com/#{login}"
   end
 
   def github_repos
