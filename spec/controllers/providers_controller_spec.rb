@@ -22,6 +22,7 @@ describe ProvidersController, vcr: github_cassette do
 
     context 'given a format of png' do
       it 'should call #render_image' do
+        allow(CachedImage).to receive(:fetch).and_return('')
         expect(controller).to receive(:render_image).and_call_original
         get :show, provider: 'sample', user: user.login, repo: repo.name, format: :png
       end
