@@ -26,6 +26,10 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'zurb-foundation', '~> 4.3.1'
 gem 'jquery-rails'
 
+
+# Gaug.es for tracking
+gem 'gauges-rails'
+
 # For Heroku
 group 'production' do
   gem 'rails_12factor'
