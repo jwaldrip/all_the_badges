@@ -80,13 +80,18 @@ class Markup
 
   end
 
-  attr_accessor :provider, :host
+  attr_writer :host
+  attr_accessor :provider
   delegate :alt, :display_name, to: :provider, prefix: true
   template nil
   order 99
 
   def port
-    URI.parse(host).port
+    uri.port
+  end
+
+  def host
+    uri.host
   end
 
   def image_url
@@ -95,6 +100,12 @@ class Markup
 
   def link_url
     provider_url provider: provider.slug, repo: provider.repo_name, user: provider.user_login, host: host, port: port
+  end
+
+  private
+
+  def uri
+    @uri ||= URI.parse(@host)
   end
 
 end
