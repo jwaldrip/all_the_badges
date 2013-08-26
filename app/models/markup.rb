@@ -21,7 +21,7 @@ class Markup
     end
 
     def for_repo(repo, host: nil)
-      supported_by_language(repo.language).reduce({}) do |output, markup_klass|
+      supported_by_language(repo.language).sort_by(&:order).reduce({}) do |output, markup_klass|
         markup = repo.providers.map { |provider| markup_klass.for_provider provider, host: host }.join("\n")
         output.merge markup_klass.display_name => markup
       end
@@ -43,6 +43,18 @@ class Markup
       @_languages = val
     end
 
+    def public_order
+      @order
+    end
+
+    def method_missing(m, *args, &block)
+      if respond_to? "public_#{m}"
+        send "public_#{m}", *args, &block
+      else
+        super
+      end
+    end
+
     private
 
     def set_display_name(name = nil)
@@ -62,11 +74,16 @@ class Markup
       ruby
     end
 
+    def order(int)
+      @order = int
+    end
+
   end
 
   attr_accessor :provider, :host
   delegate :alt, :display_name, to: :provider, prefix: true
   template nil
+  order 99
 
   def port
     URI.parse(host).port

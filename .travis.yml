@@ -8,4 +8,3 @@ before_script:
   - rake db:test:prepare
 script:
   bundle exec rspec
-  
