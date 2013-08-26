@@ -64,11 +64,13 @@ class Repo < ActiveRecord::Base
 
   def commits
     Github.repos.commits.list(user_login, name).to_a
+  rescue Github::Error::ServiceError
+    []
   end
   cache_method :commits, expires_in: 1.hour
 
   def last_sha
-    self.commits.last.sha
+    self.commits.last.sha if commits.present?
   end
 
   private
