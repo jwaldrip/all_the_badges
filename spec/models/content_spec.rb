@@ -17,7 +17,6 @@ describe Content, vcr: github_cassette do
     context 'given it returns an array' do
       let(:response){ [{ foo: :bar, baz: :raz }] }
       it 'should call .new_collection_from_response with the response and repo' do
-        fail
         expect(Content).to receive(:new_collection_from_response).with(response, repo)
         Content.find(repo, '/')
       end
