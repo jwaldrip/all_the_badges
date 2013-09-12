@@ -3,8 +3,8 @@ class Content
   include SelectiveAttributes
 
   class << self
-    include Cacheable
-    cache_keys :name
+    include DefCache
+    cache_method :find, expires_in: 60.minutes
 
     def find(repo, path)
       response = Github.repos.contents.find(repo.user_login.to_s, repo.name.to_s, path, ref: repo.branch.to_s).body
@@ -17,8 +17,6 @@ class Content
     rescue Github::Error::NotFound
       []
     end
-
-    cache_method :find, expires_in: 60.minutes
 
     private
 

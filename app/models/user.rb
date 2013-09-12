@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
   include SelectiveAttributes
-  include Cacheable
+  include DefCache
 
-  cache_keys :login
+  cache_method :github_repos, keys: [:login], expires_in: 60.minutes
 
   class << self
 
@@ -30,9 +30,7 @@ class User < ActiveRecord::Base
   end
 
   def github_repos
-    @github_repos ||= Rails.cache.fetch cache_key, expires_in: 60.minutes do
-      Github.repos.list(user: login, per_page: 1000).to_a
-    end
+    Github.repos.list(user: login, per_page: 1000).to_a
   end
 
 end

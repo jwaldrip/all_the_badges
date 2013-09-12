@@ -1,8 +1,8 @@
 class Repo < ActiveRecord::Base
   include SelectiveAttributes
-  include Cacheable
+  include DefCache
 
-  cache_keys :user_login, :name, :branch
+  cache_method :commits, expires_in: 1.hour, keys: [:user_login, :name, :branch]
 
   class << self
 
@@ -67,7 +67,6 @@ class Repo < ActiveRecord::Base
   rescue Github::Error::ServiceError
     []
   end
-  cache_method :commits, expires_in: 1.hour
 
   def last_sha
     self.commits.last.sha if commits.present?

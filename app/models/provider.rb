@@ -1,13 +1,13 @@
 class Provider
   include ActiveModel::Model
-  include Cacheable
-
-  cache_keys :user_login, :repo_name, :branch
+  include DefCache
 
   attr_accessor :repo
   delegate :branch, :is_package?, :contains_bundle?, :language_is?, :user, to: :repo
   delegate :name, to: :repo, prefix: true
   delegate :login, to: :user, prefix: true
+
+  cache_method :created?, expires_in: 60.minutes, keys: [:user_login, :repo_name, :branch]
 
   validates_presence_of :raw_image_url, :raw_link_url
 
@@ -121,8 +121,6 @@ class Provider
   rescue URI::InvalidURIError
     false
   end
-
-  cache_method :created?, expires_in: 60.minutes
 
   def http
     @http ||= Faraday.new do |conn|

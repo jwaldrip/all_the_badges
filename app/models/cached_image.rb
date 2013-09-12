@@ -1,7 +1,7 @@
 class CachedImage
   include ActionView::Helpers::AssetUrlHelper
-  include Cacheable
-  cache_keys :repo_name, :repo_last_sha, :provider_display_name
+  include DefCache
+  cache_method :body, keys: [:repo_name, :repo_last_sha, :provider_display_name]
 
   class << self
 
@@ -26,8 +26,6 @@ class CachedImage
   rescue URI::InvalidURIError
     File.read File.join 'app', 'assets', 'images', image_url
   end
-
-  cache_method :body
 
   private
 
