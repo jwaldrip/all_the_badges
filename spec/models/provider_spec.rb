@@ -267,10 +267,4 @@ describe Provider, vcr: github_cassette do
     end
   end
 
-  describe '#cache_key' do
-    it 'should include the proper values' do
-      provider.cache_key.split('/').should include provider.user_login, provider.repo_name, provider.branch
-    end
-  end
-
 end
