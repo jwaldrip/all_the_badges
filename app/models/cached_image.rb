@@ -1,7 +1,7 @@
 class CachedImage
   include ActionView::Helpers::AssetUrlHelper
   include DefCache
-  cache_method :body, keys: [:repo_name, :repo_last_sha, :provider_display_name]
+  cache_method :body, keys: [:repo_name, :repo_last_sha, :provider_display_name, :repo_build_status]
 
   class << self
 
@@ -14,7 +14,7 @@ class CachedImage
   attr_reader :provider
   delegate :image_url, :repo, to: :provider
   delegate :display_name, to: :provider, prefix: true
-  delegate :name, :last_sha, to: :repo, prefix: true
+  delegate :build_status, :name, :last_sha, to: :repo, prefix: true
 
   def initialize(provider)
     raise ArgumentError, 'provider must be a Provider' unless provider.is_a? Provider

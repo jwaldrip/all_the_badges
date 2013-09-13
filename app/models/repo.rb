@@ -3,6 +3,7 @@ class Repo < ActiveRecord::Base
   include DefCache
 
   cache_method :commits, expires_in: 1.hour, keys: [:user_login, :name, :branch]
+  cache_method :build_status, expires_in: 1.hour, keys: :last_sha
 
   class << self
 
@@ -68,8 +69,12 @@ class Repo < ActiveRecord::Base
     []
   end
 
+  def build_status
+    Github.repos.statuses.list(user_login, name, last_sha).sort_by(&:updated_at).last.state
+  end
+
   def last_sha
-    self.commits.last.sha if commits.present?
+    self.commits.first.sha if commits.present?
   end
 
   private
