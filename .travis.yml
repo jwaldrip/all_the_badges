@@ -1,6 +1,8 @@
 language: ruby
 rvm:
   - 2.0.0
+before_install: gem install bundler --pre
+bundler_args: -j8
 before_script:
   - cp config/database.ci.yml config/database.yml
   - rake db:create
