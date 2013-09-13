@@ -71,6 +71,8 @@ class Repo < ActiveRecord::Base
 
   def build_status
     Github.repos.statuses.list(user_login, name, last_sha).sort_by(&:updated_at).last.state
+  rescue NoMethodError
+    :unknown
   end
 
   def last_sha
