@@ -5,6 +5,8 @@ before_install: gem install bundler --pre
 bundler_args: -j8
 before_script:
   - cp config/database.ci.yml config/database.yml
-  - rake db:create db:schema:load db:test:prepare
+  - rake db:create
+  - rake db:schema:load
+  - rake db:test:prepare
 script:
   bundle exec rspec
