@@ -8,30 +8,30 @@
 #       it { should delegate(:year).to(:created_at) }
 #     end
 
-RSpec::Matchers.define :delegate do |method|
+RSpec::Matchers.define :delegate do |target_method|
   match do |delegator|
-    @method = @prefix ? :"#{@to}_#{method}" : method
+    source_method = @prefix ? :"#{@to}_#{target_method}" : target_method
     @delegator = delegator
     begin
       @delegator.send(@to)
     rescue NoMethodError
       raise "#{@delegator} does not respond to #{@to}!"
     end
-    @delegator.stub(@to).and_return double('receiver')
-    @delegator.send(@to).stub(method).and_return :called
-    @delegator.send(@method) == :called
+    allow(@delegator).to receive(@to).and_return(double 'receiver', target_method => :called)
+    args = (target_method =~ /[^\]]=$/) ? [:called] : []
+    @delegator.send(source_method, *args) == :called
   end
 
   description do
-    "delegate :#{@method} to its #{@to}#{@prefix ? ' with prefix' : ''}"
+    "delegate :#{target_method} to its #{@to}#{@prefix ? ' with prefix' : ''}"
   end
 
   failure_message_for_should do |text|
-    "expected #{@delegator} to delegate :#{@method} to its #{@to}#{@prefix ? ' with prefix' : ''}"
+    "expected #{@delegator} to delegate :#{target_method} to its #{@to}#{@prefix ? ' with prefix' : ''}"
   end
 
   failure_message_for_should_not do |text|
-    "expected #{@delegator} not to delegate :#{@method} to its #{@to}#{@prefix ? ' with prefix' : ''}"
+    "expected #{@delegator} not to delegate :#{target_method} to its #{@to}#{@prefix ? ' with prefix' : ''}"
   end
 
   chain(:to) { |receiver| @to = receiver }
