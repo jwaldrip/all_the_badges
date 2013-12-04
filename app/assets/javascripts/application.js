@@ -15,6 +15,5 @@
 //= require foundation
 //= require_tree .
 //= require_self
-//= require gauges
 
 $(function(){ $(document).foundation(); });

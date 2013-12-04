@@ -1,8 +1,9 @@
 .panel.radius
   %h1
     All the Badges
-    %small.subheader your one stop destination for dev badges
-  %h4.center Enter a Github repo to find all its badges.
+    %small.subheader.show-for-medium-up your one stop destination for dev badges
+  %h4.center.show-for-medium-up Enter a Github repo to find all its badges
+  %h4.center.show-for-small-only Enter a Github repo
   = form_tag :find do
     - if flash[:notice]
       .alert-box.alert.radius

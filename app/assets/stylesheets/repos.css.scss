@@ -2,13 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.markup pre.code {
+#markup pre.code {
   line-height: 1.8em;
-  font-size: 0.8em;
+  font-size: 0.7em;
   font-family: 'Source Code Pro', sans-serif;
   margin: 10px;
   overflow-x: auto;
-  overflow-wrap: normal;
   white-space: pre;
 }
 
@@ -16,4 +15,9 @@ div.well {
   background-color: #cfd7df;
   border: 1px #b0b8c0 solid;
   border-radius: 5px;
+  width: 100%;
+}
+
+#markup .content {
+  width: 100%;
 }

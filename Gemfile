@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 # Core Frameworks
-gem 'rails', '4.0.1'
+gem 'rails', '4.0.2'
 gem 'puma'
 gem 'pg'
 
@@ -23,7 +23,7 @@ gem 'haml-rails'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
-gem 'zurb-foundation', '~> 4.3.1'
+gem 'foundation-rails', '~> 5.0.0'
 gem 'jquery-rails'
 gem 'def_cache'
 
@@ -41,10 +41,10 @@ gem "pry-rails"
 group :development, :test do
   gem 'travis'
   gem 'dotenv-rails'
-  gem "factory_girl_rails", "~> 4.2.1"
-  gem "guard", "~> 1.8.0"
-  gem "guard-bundler", "~> 1.0.0"
-  gem "guard-rspec", "~> 3.0.0"
+  gem "factory_girl_rails", "~> 4.3.0"
+  gem "guard", "~> 2.2.4"
+  gem "guard-bundler", "~> 2.0.0"
+  gem "guard-rspec", "~> 4.1.0"
   gem "shoulda-matchers"
   gem "vcr"
   gem "database_cleaner"
