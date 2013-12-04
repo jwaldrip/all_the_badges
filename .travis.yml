@@ -1,12 +1,18 @@
 language: ruby
 rvm:
-  - 2.0.0
+- 2.0.0
 before_install: gem install bundler --pre
 bundler_args: -j8
 before_script:
-  - cp config/database.ci.yml config/database.yml
-  - rake db:create
-  - rake db:schema:load
-  - rake db:test:prepare
-script:
-  bundle exec rspec
+- cp config/database.ci.yml config/database.yml
+- rake db:create
+- rake db:schema:load
+- rake db:test:prepare
+script: bundle exec rspec
+deploy:
+  provider: heroku
+  api_key:
+    secure: h8Wt0P7mHTUciu1O5GUJHQK99r2KQTDZnqcYKF7tScaETLZDwcnOVFGkAu7ZNv/ohfQ9//4swx0ASDy2EP35tUEsjWXGX496Uec2DRUlgC+DKu2CaPlPIM+qyxWrsyhrtmG/NwsilQf2j+ELEES9ulGuyAHNKO+IFCXTDxgmHtI=
+  app: all-the-badges
+  on:
+    repo: jwaldrip/all_the_badges

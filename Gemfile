@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 # Core Frameworks
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.1'
 gem 'puma'
 gem 'pg'
 
@@ -39,6 +39,7 @@ gem "pry-rails"
 
 # Testing
 group :development, :test do
+  gem 'travis'
   gem 'dotenv-rails'
   gem "factory_girl_rails", "~> 4.2.1"
   gem "guard", "~> 1.8.0"
