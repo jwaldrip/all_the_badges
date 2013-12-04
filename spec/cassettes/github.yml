@@ -3898,4 +3898,1570 @@ http_interactions:
       string: '{"message":"Not Found"}'
     http_version: 
   recorded_at: Sun, 25 Aug 2013 19:50:12 GMT
-recorded_with: VCR 2.5.0
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4970'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71AD6A:529EBDC7
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:43 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4969'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71AD8C:529EBDC7
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:43 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4968'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71ADA7:529EBDC7
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:43 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4967'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71ADC8:529EBDC7
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:43 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4966'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71ADE1:529EBDC7
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:43 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4965'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71ADFA:529EBDC7
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:43 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4964'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71AE19:529EBDC7
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:43 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4963'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71AE43:529EBDC7
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:44 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4962'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71AE6B:529EBDC8
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:44 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4961'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71AE98:529EBDC8
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:44 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4960'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71AED7:529EBDC8
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:44 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4959'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71AEEE:529EBDC8
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:44 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4958'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71AF0D:529EBDC8
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:44 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4957'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71AF36:529EBDC8
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:44 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4956'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71AF59:529EBDC8
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:44 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4955'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71AF7E:529EBDC8
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:44 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4954'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71AF9C:529EBDC8
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:44 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4953'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71AFBD:529EBDC8
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:44 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4952'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71AFE6:529EBDC8
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:45 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4951'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71B00A:529EBDC9
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:45 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4950'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71B031:529EBDC9
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:45 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4949'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71B046:529EBDC9
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:45 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4948'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71B06A:529EBDC9
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:45 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4947'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71B08B:529EBDC9
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:45 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4946'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71B0B5:529EBDC9
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:45 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4945'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71B0D8:529EBDC9
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:45 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4944'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71B0F7:529EBDC9
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:45 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4943'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71B114:529EBDC9
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:45 GMT
+- request:
+    method: get
+    uri: https://api.github.com/repos/all-the-badges-app/all_the_badges/commits?access_token=58aa9c6145e18dca2730779ce98e6960b52c5743
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json,application/vnd.github.beta+json;q=0.5,application/json;q=0.1
+      Accept-Charset:
+      - utf-8
+      User-Agent:
+      - Github Ruby Gem 0.10.2
+      Authorization:
+      - Basic YWxsLXRoZS1iYWRnZXMtYXBwOmVnZ2hldGZvdnVreWVkb2l2eXJ1d29qd3ViZWplY2Y="
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 04 Dec 2013 05:29:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Status:
+      - 404 Not Found
+      X-RateLimit-Limit:
+      - '5000'
+      X-RateLimit-Remaining:
+      - '4942'
+      X-RateLimit-Reset:
+      - '1386137331'
+      X-GitHub-Media-Type:
+      - github.v3; format=json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '76'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - '*'
+      X-GitHub-Request-Id:
+      - 18081480:31F1:71B136:529EBDC9
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"http://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 04 Dec 2013 05:29:45 GMT
+recorded_with: VCR 2.8.0
