@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.1.0'
 
 # Core Frameworks
-gem 'rails', '4.0.2'
+gem 'rails', '~> 4.0.2'
 gem 'puma'
 gem 'pg'
 
@@ -42,13 +42,13 @@ group :development, :test do
   gem 'travis'
   gem 'dotenv-rails'
   gem "factory_girl_rails", "~> 4.3.0"
-  gem "guard", "~> 2.2.4"
+  gem "guard", "~> 2.3.0"
   gem "guard-bundler", "~> 2.0.0"
-  gem "guard-rspec", "~> 4.1.0"
+  gem "guard-rspec", "~> 4.2.5"
   gem "shoulda-matchers"
   gem "vcr"
   gem "database_cleaner"
-  gem "pry-debugger"
+  gem "pry-nav"
   gem "pry-remote"
   gem "rb-inotify", require: false
   gem "rb-fsevent", require: false
