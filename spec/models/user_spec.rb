@@ -21,6 +21,11 @@ describe User, vcr: github_cassette, clean_db: true do
         User.should_not_receive(:fetch)
         User.find_or_fetch(login: existing_user.login)
       end
+
+      it 'should not be case sensitive' do
+        User.should_not_receive(:fetch)
+        User.find_or_fetch(login: existing_user.login.upcase)
+      end
     end
 
     context 'given a user is not in the database' do

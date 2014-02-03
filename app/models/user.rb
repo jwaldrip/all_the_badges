@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   class << self
 
     def find_or_fetch(login: nil)
-      find_by(login: login) || fetch(login: login)
+      find_by("login = lower(?)", login) || fetch(login: login)
     end
 
     private
