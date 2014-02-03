@@ -47,14 +47,6 @@ class Markup
       @order
     end
 
-    def method_missing(m, *args, &block)
-      if respond_to? "public_#{m}"
-        send "public_#{m}", *args, &block
-      else
-        super
-      end
-    end
-
     private
 
     def set_display_name(name = nil)
@@ -76,6 +68,14 @@ class Markup
 
     def order(int)
       @order = int
+    end
+
+    def method_missing(m, *args, &block)
+      if respond_to? "public_#{m}"
+        send "public_#{m}", *args, &block
+      else
+        super
+      end
     end
 
   end

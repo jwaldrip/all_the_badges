@@ -177,6 +177,13 @@ describe Markup, vcr: github_cassette do
       end
     end
 
+
+    describe '.method_that_does_not_exist' do
+      it 'should raise a no method error' do
+        expect { markup.method_that_does_not_exist }.to raise_error NoMethodError
+      end
+    end
+
   end
 
   let(:klass) { stub_const 'SampleMarkup', Class.new(Markup) }
