@@ -5,7 +5,8 @@ class GemnasiumProvider < Provider
   alt 'Dependencies'
   order 2
   link_url "https://gemnasium.com/:user_login/:repo_name"
-  image_url "https://gemnasium.com/:user_login/:repo_name.png"
+
+  image_url "https://img.shields.io/gemnasium/:user_login/:repo_name.png"
   creatable! link_url: 'https://gemnasium.com/:user_login', image_url: "gemnasium_inactive.png"
 
   private
