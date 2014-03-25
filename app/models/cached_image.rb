@@ -1,7 +1,5 @@
 class CachedImage
   include ActionView::Helpers::AssetUrlHelper
-  include DefCache
-  cache_method :body, keys: [:repo_name, :repo_last_sha, :provider_display_name, :repo_build_status], expires_in: 60.minutes
 
   class << self
 

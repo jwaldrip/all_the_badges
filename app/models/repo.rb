@@ -79,6 +79,14 @@ class Repo < ActiveRecord::Base
     self.commits.first.sha if commits.present?
   end
 
+  def contains_file?(file)
+    contents('/').any? { |f| f.name =~ /#{file}/ }
+  end
+
+  def contains_directory?(dir)
+    contents(dir).present?
+  end
+
   private
 
   def determine_if_is_package
@@ -92,23 +100,23 @@ class Repo < ActiveRecord::Base
   end
 
   def contains_gemspec?
-    language_is?(:ruby) && contents('/').any? { |file| file.name =~ /\.gemspec/ }
+    language_is?(:ruby) && contains_file?('.gemspec')
   end
 
   def contains_package_json?
-    language_is?(:javascript) && contents('/').any? { |file| file.name =~ /package\.json/ }
+    language_is?(:javascript) && contains_file?('package.json')
   end
 
   def contains_setup_script?
-    language_is?(:python) && contents('/').any? { |file| file.name =~ /setup\.py/ }
+    language_is?(:python) && contains_file?('setup.py')
   end
 
   def contains_gemfile?
-    contents('/').any? { |file| file.name =~ /Gemfile/ }
+    language_is?(:ruby) && contains_file?('Gemfile')
   end
 
   def contains_node_modules?
-    language_is?(:javascript) && contents('/node_modules').present?
+    language_is?(:javascript) && contains_directory?('/node_modules')
   rescue Github::Error::NotFound
     false
   end
