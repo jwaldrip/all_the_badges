@@ -123,7 +123,7 @@ class Provider
   end
 
   def http
-    @http ||= Faraday.new do |conn|
+    @http ||= Faraday.new(ssl: { verify: false }) do |conn|
       conn.response :follow_redirects
       conn.adapter :net_http
     end
